@@ -1,5 +1,4 @@
 // app/page.tsx
-// Main home page matching Ariel Batoon's design with profile photo and experience images
 
 'use client';
 
