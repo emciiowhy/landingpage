@@ -1,6 +1,3 @@
-// app/contact/page.tsx
-// Contact page with working form submission to backend
-
 'use client';
 
 import { useState } from 'react';
@@ -27,6 +24,12 @@ export default function ContactPage() {
     message: string;
   }>({ type: null, message: '' });
 
+  // Automatically switch between local and production URLs
+  const backendUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://my-portfolio-e4bf.onrender.com'
+      : 'http://localhost:5000';
+
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -35,14 +38,14 @@ export default function ContactPage() {
     });
   };
 
-  // Form submission handler
+  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -71,7 +74,7 @@ export default function ContactPage() {
       console.error('Error submitting form:', error);
       setStatus({
         type: 'error',
-        message: 'Failed to send message. Im sorry for this.',
+        message: 'Failed to send message. Please try again later.',
       });
     } finally {
       setIsLoading(false);
@@ -184,7 +187,6 @@ export default function ContactPage() {
                 from you. Feel free to reach out for any inquiries or collaborations.
               </p>
 
-              {/* Status Messages */}
               {status.type && (
                 <div className={`mb-6 p-4 rounded-lg flex items-start gap-3 ${
                   status.type === 'success' 

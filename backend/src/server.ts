@@ -5,7 +5,7 @@ import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contact';
-import { db } from './db'; // ✅ Drizzle connection
+import { db } from './db';
 
 // ✅ Load environment variables
 dotenv.config();
@@ -17,22 +17,37 @@ const FRONTEND_URL = process.env.FRONTEND_URL || 'https://mczaldy.vercel.app';
 // ✅ Middleware
 app.use(
   cors({
-    origin: [
-      FRONTEND_URL,
-      'https://mczaldy.vercel.app', // Vercel live
-      'https://my-portfolio-e4bf.onrender.com', // Render backend
-      'https://vercel.app', // preview builds
-    ],
+    origin: (origin, callback) => {
+      const allowedOrigins = [
+        FRONTEND_URL,
+        'https://mczaldy.vercel.app',
+        'https://mczaldy.vercel.app/',
+        'https://my-portfolio-e4bf.onrender.com',
+        'https://vercel.app',
+        'http://localhost:3000',
+      ];
+
+      // Allow requests with no origin (like Postman or server-to-server)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.warn('🚫 Blocked by CORS:', origin);
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Test database connection at startup
+// ✅ Test database connection
 (async () => {
   try {
-    await db.execute(`SELECT NOW()`); // test connection
+    await db.execute(`SELECT NOW()`);
     console.log('✅ Connected to Neon Postgres successfully!');
   } catch (err) {
     console.error('❌ Failed to connect to Neon DB:', err);
