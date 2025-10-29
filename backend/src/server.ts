@@ -15,7 +15,7 @@ const FRONTEND_URL = process.env.FRONTEND_URL || 'https://mczaldy.vercel.app';
 
 // ✅ Initialize Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
-const ADMIN_EMAIL = process.env.YOUR_EMAIL || 'youremail@gmail.com';
+const ADMIN_EMAIL = process.env.YOUR_EMAIL || 'mcmcyap07@gmail.com';
 
 // ✅ Middleware
 app.use(
