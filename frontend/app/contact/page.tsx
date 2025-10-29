@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -24,13 +24,14 @@ export default function ContactPage() {
     message: string;
   }>({ type: null, message: '' });
 
+  const [showToast, setShowToast] = useState(false);
+
   // Automatically switch between local and production URLs
   const backendUrl =
     process.env.NODE_ENV === 'production'
       ? 'https://my-portfolio-e4bf.onrender.com'
       : 'http://localhost:5000';
 
-  // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -38,7 +39,6 @@ export default function ContactPage() {
     });
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -64,6 +64,10 @@ export default function ContactPage() {
           email: '',
           message: ''
         });
+
+        // show toast success
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 4000);
       } else {
         setStatus({
           type: 'error',
@@ -106,7 +110,15 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 relative">
+      {/* ✅ Floating toast notification */}
+      {showToast && (
+        <div className="fixed top-6 right-6 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-fade-in">
+          <CheckCircle className="h-5 w-5" />
+          <span>You successfully sent your message!</span>
+        </div>
+      )}
+
       <section className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Let's get in touch!</h1>
