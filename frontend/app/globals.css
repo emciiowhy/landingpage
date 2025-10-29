@@ -58,6 +58,8 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+/* 👋 Wave animation */
 @keyframes wave {
   0% { transform: rotate(0deg); }
   10% { transform: rotate(14deg); }
@@ -75,6 +77,22 @@
   display: inline-block;
 }
 
+/* ✅ Fade-in animation for toast */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -83,4 +101,3 @@
     @apply bg-background text-foreground;
   }
 }
-

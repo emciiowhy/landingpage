@@ -10,6 +10,16 @@ import {
   CheckCircle, AlertCircle 
 } from 'lucide-react';
 
+// ✅ Helper: Fetch with timeout
+const fetchWithTimeout = (url: string, options: RequestInit, timeout = 10000) => {
+  return Promise.race([
+    fetch(url, options),
+    new Promise<Response>((_, reject) =>
+      setTimeout(() => reject(new Error('Request timeout')), timeout)
+    )
+  ]);
+};
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -39,17 +49,22 @@ export default function ContactPage() {
     });
   };
 
+  // ✅ Updated handleSubmit using fetchWithTimeout
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch(`${backendUrl}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetchWithTimeout(
+        `${backendUrl}/api/contact`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        },
+        10000 // 10 seconds timeout
+      );
 
       const data = await response.json();
 
@@ -65,7 +80,6 @@ export default function ContactPage() {
           message: ''
         });
 
-        // show toast success
         setShowToast(true);
         setTimeout(() => setShowToast(false), 4000);
       } else {
@@ -78,7 +92,7 @@ export default function ContactPage() {
       console.error('Error submitting form:', error);
       setStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again later.',
+        message: 'Failed to send message. Please check your connection and try again.',
       });
     } finally {
       setIsLoading(false);
