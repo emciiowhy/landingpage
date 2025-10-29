@@ -71,7 +71,7 @@ export default function ContactPage() {
       console.error('Error submitting form:', error);
       setStatus({
         type: 'error',
-        message: 'Failed to send message. Please make sure the backend server is running.',
+        message: 'Failed to send message. Im sorry for this.',
       });
     } finally {
       setIsLoading(false);
