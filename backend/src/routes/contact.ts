@@ -1,15 +1,25 @@
 // backend/src/routes/contact.ts
 import { Router, Request, Response } from "express";
 import { db } from "../db";
-import { Resend } from "resend";
-import { contactMessages } from "../db/schema";
+import { contactMessages, ContactMessage } from "../db/schema";
+import nodemailer from "nodemailer";
 
 const router = Router();
 
-const resend = new Resend(process.env.RESEND_API_KEY || "");
+// ✅ Gmail transporter
+const GMAIL_USER = process.env.GMAIL_USER || "";
+const GMAIL_PASS = process.env.GMAIL_PASS || "";
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
 
-// ✅ POST /api/contact - Save to DB and send emails
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: GMAIL_USER,
+    pass: GMAIL_PASS,
+  },
+});
+
+// ✅ POST /api/contact - Save to DB + send emails
 router.post("/", async (req: Request, res: Response) => {
   try {
     const { name, email, message } = req.body;
@@ -23,29 +33,31 @@ router.post("/", async (req: Request, res: Response) => {
 
     console.log("📨 Contact form received:", { name, email });
 
-    // ✅ 1. Insert message into Neon DB (with Drizzle ORM)
+    // ✅ 1. Insert into DB (Drizzle ORM type-safe)
+    const newMessage: ContactMessage = {
+      firstName: name.split(" ")[0] || name,
+      lastName: name.split(" ").slice(1).join(" ") || "",
+      email,
+      message,
+    };
+
     const savedData = await db
       .insert(contactMessages)
-      .values({
-        firstName: name.split(" ")[0] || name,
-        lastName: name.split(" ").slice(1).join(" ") || "",
-        email,
-        message,
-      })
+      .values(newMessage)
       .returning();
 
     console.log("✅ Message saved to DB:", savedData[0]);
 
-    // ✅ 2. Send emails (non-blocking)
-    sendEmailsAsync(name, email, message).catch((error) =>
-      console.error("❌ Email send operation failed:", error)
+    // ✅ 2. Send emails async (won’t block response)
+    sendEmailsAsync(name, email, message).catch((err) =>
+      console.error("❌ Email sending failed:", err)
     );
 
-    // ✅ Respond instantly - email will happen in background
+    // ✅ Response sent immediately
     res.status(200).json({
       success: true,
       message: "✅ Message received and auto-reply sent!",
-      data: savedData[0],
+      data: savedData[0], // contains: id, firstName, lastName, email, message, createdAt
     });
   } catch (error) {
     console.error("❌ Error in /api/contact:", error);
@@ -59,8 +71,8 @@ router.post("/", async (req: Request, res: Response) => {
 async function sendEmailsAsync(name: string, email: string, message: string) {
   try {
     // ✅ Admin notification
-    await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${GMAIL_USER}>`,
       to: ADMIN_EMAIL,
       subject: `📨 New portfolio message from ${name}`,
       html: `
@@ -74,8 +86,8 @@ async function sendEmailsAsync(name: string, email: string, message: string) {
     console.log(`📧 Admin email sent to: ${ADMIN_EMAIL}`);
 
     // ✅ Auto-reply to sender
-    await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${GMAIL_USER}>`,
       to: email,
       subject: "📩 Thanks for contacting me!",
       html: `
