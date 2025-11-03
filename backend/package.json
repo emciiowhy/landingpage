@@ -15,7 +15,8 @@
     "drizzle-orm": "^0.44.7",
     "express": "^4.18.2",
     "mysql2": "^3.3.3",
-    "nodemailer": "^6.9.11"
+    "nodemailer": "^6.9.11",
+    "resend": "^6.4.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
