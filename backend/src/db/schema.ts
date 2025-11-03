@@ -3,7 +3,7 @@
 
 import { pgTable, serial, text, timestamp, varchar } from 'drizzle-orm/pg-core';
 
-// ✅ Contact messages table (using Drizzle ORM)
+// ✅ Current active messages table (used in contact form API)
 export const contactMessages = pgTable('contact_messages', {
   id: serial('id').primaryKey(),
   firstName: text('first_name').notNull(),
@@ -13,7 +13,8 @@ export const contactMessages = pgTable('contact_messages', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
-// ✅ Legacy contacts table (for backward compatibility)
+// 🔁 Legacy contacts table (optional fallback)
+// Still exists in DB but no longer used in API
 export const contacts = pgTable('contacts', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 255 }).notNull(),
@@ -22,8 +23,9 @@ export const contacts = pgTable('contacts', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
-// ✅ TypeScript types
+// ✅ TypeScript types (auto generated from Drizzle schema)
 export type ContactMessage = typeof contactMessages.$inferInsert;
 export type ContactMessageRecord = typeof contactMessages.$inferSelect;
+
 export type Contact = typeof contacts.$inferInsert;
 export type ContactRecord = typeof contacts.$inferSelect;
