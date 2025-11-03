@@ -1,105 +1,84 @@
-// backend/src/routes/contact.ts
 import { Router, Request, Response } from "express";
 import { db } from "../db";
-import { contactMessages, ContactMessage } from "../db/schema";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+import { contactMessages } from "../db/schema";
 
 const router = Router();
 
-// ✅ Gmail transporter
-const GMAIL_USER = process.env.GMAIL_USER || "";
-const GMAIL_PASS = process.env.GMAIL_PASS || "";
+// ✅ Initialize Resend once
+const resend = new Resend(process.env.RESEND_API_KEY || "");
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: GMAIL_USER,
-    pass: GMAIL_PASS,
-  },
-});
-
-// ✅ POST /api/contact - Save to DB + send emails
+// ✅ POST /api/contact - Save to DB and send emails
 router.post("/", async (req: Request, res: Response) => {
   try {
-    const { name, email, message } = req.body;
+    const { firstName, lastName, email, message } = req.body;
 
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    if (!firstName?.trim() || !lastName?.trim() || !email?.trim() || !message?.trim()) {
       return res.status(400).json({
         success: false,
-        error: "All fields are required",
+        error: "All fields are required.",
       });
     }
 
-    console.log("📨 Contact form received:", { name, email });
+    console.log("📨 Contact form received:", { firstName, lastName, email });
 
-    // ✅ 1. Insert into DB (Drizzle ORM type-safe)
-    const newMessage: ContactMessage = {
-      firstName: name.split(" ")[0] || name,
-      lastName: name.split(" ").slice(1).join(" ") || "",
-      email,
-      message,
-    };
-
-    const savedData = await db
+    // ✅ Save message into DB
+    const saved = await db
       .insert(contactMessages)
-      .values(newMessage)
+      .values({ firstName, lastName, email, message })
       .returning();
 
-    console.log("✅ Message saved to DB:", savedData[0]);
+    console.log("✅ Message saved:", saved[0]);
 
-    // ✅ 2. Send emails async (won’t block response)
-    sendEmailsAsync(name, email, message).catch((err) =>
-      console.error("❌ Email sending failed:", err)
-    );
+    // ✅ Send emails in background
+    sendEmailsAsync(`${firstName} ${lastName}`, email, message).catch(console.error);
 
-    // ✅ Response sent immediately
     res.status(200).json({
       success: true,
-      message: "✅ Message received and auto-reply sent!",
-      data: savedData[0], // contains: id, firstName, lastName, email, message, createdAt
+      message: "Your message has been sent and recorded.",
+      data: saved[0],
     });
   } catch (error) {
-    console.error("❌ Error in /api/contact:", error);
+    console.error("❌ API error:", error);
     res.status(500).json({
       success: false,
-      error: "Failed to process message.",
+      error: "Something went wrong while submitting.",
     });
   }
 });
 
+// ✅ Background task to handle email delivery
 async function sendEmailsAsync(name: string, email: string, message: string) {
   try {
-    // ✅ Admin notification
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${GMAIL_USER}>`,
+    // Admin notification
+    await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
       to: ADMIN_EMAIL,
-      subject: `📨 New portfolio message from ${name}`,
+      subject: `📨 New message from ${name}`,
       html: `
-        <h2>New Message from Portfolio Contact Form</h2>
+        <h3>New Portfolio Message 📩</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong><br>${message}</p>
       `,
     });
+    console.log(`📧 Admin notified.`);
 
-    console.log(`📧 Admin email sent to: ${ADMIN_EMAIL}`);
-
-    // ✅ Auto-reply to sender
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${GMAIL_USER}>`,
+    // Auto-reply to user
+    await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
       to: email,
-      subject: "📩 Thanks for contacting me!",
+      subject: `Thanks for reaching out, ${name.split(" ")[0]}!`,
       html: `
-        <p>Hi ${name.split(" ")[0]},</p>
-        <p>Thank you for reaching out! I’ve received your message and will get back to you soon.</p>
-        <p>Best regards,<br><strong>Mc Zaldy</strong></p>
+        <p>Hi <strong>${name.split(" ")[0]}</strong>,</p>
+        <p>Thanks for your message — I’ve received it and will get back to you soon!</p>
+        <p>Regards,<br><strong>Mc Zaldy</strong></p>
       `,
     });
-
-    console.log(`📧 Auto-reply sent to: ${email}`);
-  } catch (error) {
-    console.error("❌ Error sending email:", error);
+    console.log(`📧 Auto-reply sent to visitor.`);
+  } catch (err) {
+    console.error("❌ Email sending failed:", err);
   }
 }
 
