@@ -8,13 +8,29 @@ const router = Router();
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
 const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL || "";
 
-// ✅ Create Gmail transporter
+// ✅ Create Gmail transporter with timeout
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // use TLS
   auth: {
     user: process.env.GMAIL_USER || 'mcmcyap07@gmail.com',
-    pass: process.env.GMAIL_APP_PASSWORD,
+    pass: process.env.GMAIL_APP_PASSWORD || 'kncoorrokjochxuc',
   },
+  connectionTimeout: 10000,
+  socketTimeout: 10000,
+  tls: {
+    rejectUnauthorized: false
+  }
+});
+
+// ✅ Verify connection on startup
+transporter.verify(function (error, success) {
+  if (error) {
+    console.error('❌ Gmail SMTP connection failed:', error);
+  } else {
+    console.log('✅ Gmail SMTP server is ready to send emails');
+  }
 });
 
 // ✅ POST /api/contact - Save to DB, send to Make.com, and send emails
