@@ -1,14 +1,21 @@
 import { Router, Request, Response } from "express";
 import { db } from "../db";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { contactMessages } from "../db/schema";
 
 const router = Router();
 
-// ✅ Initialize Resend once
-const resend = new Resend(process.env.RESEND_API_KEY || "");
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
 const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL || "";
+
+// ✅ Create Gmail transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER || 'mcmcyap07@gmail.com',
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 // ✅ POST /api/contact - Save to DB, send to Make.com, and send emails
 router.post("/", async (req: Request, res: Response) => {
@@ -97,12 +104,16 @@ async function sendToMakeWebhook(data: {
   }
 }
 
-// ✅ Background task to handle email delivery
+// ✅ Background task to handle email delivery via Gmail
 async function sendEmailsAsync(name: string, email: string, message: string) {
+  console.log('🔧 Starting email sending process...');
+  console.log('📧 Sending to:', email);
+  
   try {
     // Admin notification
-    await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
+    console.log('📤 Attempting to send admin notification...');
+    await transporter.sendMail({
+      from: '"Portfolio Contact" <mcmcyap07@gmail.com>',
       to: ADMIN_EMAIL,
       subject: `📨 New message from ${name}`,
       html: `
@@ -112,11 +123,12 @@ async function sendEmailsAsync(name: string, email: string, message: string) {
         <p><strong>Message:</strong><br>${message}</p>
       `,
     });
-    console.log(`📧 Admin notified.`);
+    console.log(`✅ Admin notified at ${ADMIN_EMAIL}`);
 
     // Auto-reply to user
-    await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
+    console.log('📤 Attempting to send auto-reply to visitor...');
+    await transporter.sendMail({
+      from: '"Mc Zaldy" <mcmcyap07@gmail.com>',
       to: email,
       subject: `Thanks for reaching out, ${name.split(" ")[0]}!`,
       html: `
@@ -125,7 +137,7 @@ async function sendEmailsAsync(name: string, email: string, message: string) {
         <p>Regards,<br><strong>Mc Zaldy</strong></p>
       `,
     });
-    console.log(`📧 Auto-reply sent to visitor.`);
+    console.log(`✅ Auto-reply sent to ${email}`);
   } catch (err) {
     console.error("❌ Email sending failed:", err);
   }
