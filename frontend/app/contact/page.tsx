@@ -5,13 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { 
-  Mail, Phone, MessageSquare, Linkedin, Github, Twitter, Facebook, 
+import {
+  Mail, Phone, MessageSquare, Linkedin, Github, Twitter, Facebook,
   CheckCircle, AlertCircle, Building2
 } from 'lucide-react';
 
 // ✅ Helper: Fetch with timeout
-const fetchWithTimeout = (url: string, options: RequestInit, timeout = 10000) => {
+const fetchWithTimeout = (url: string, options: RequestInit, timeout = 30000) => {
   return Promise.race([
     fetch(url, options),
     new Promise<Response>((_, reject) =>
@@ -72,7 +72,7 @@ export default function ContactPage() {
             message: formData.message,
           }),
         },
-        10000
+        30000
       );
 
       const data = await response.json();
@@ -83,13 +83,13 @@ export default function ContactPage() {
           type: 'success',
           message: 'You successfully sent your message!',
         });
-        setFormData({ 
-          firstName: '', 
-          lastName: '', 
-          email: '', 
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
           phone: '',
           company: '',
-          message: '' 
+          message: ''
         });
         setShowToast(true);
 
@@ -230,11 +230,10 @@ export default function ContactPage() {
 
               {status.type && (
                 <div
-                  className={`mb-6 p-4 rounded-lg flex items-start gap-3 ${
-                    status.type === 'success'
+                  className={`mb-6 p-4 rounded-lg flex items-start gap-3 ${status.type === 'success'
                       ? 'bg-green-50 text-green-800 border border-green-200'
                       : 'bg-red-50 text-red-800 border border-red-200'
-                  }`}
+                    }`}
                 >
                   {status.type === 'success' ? (
                     <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -347,9 +346,8 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className={`w-full py-6 text-lg text-white ${
-                    isLoading ? 'bg-gray-500 cursor-not-allowed' : 'bg-gray-900 hover:bg-gray-800'
-                  }`}
+                  className={`w-full py-6 text-lg text-white ${isLoading ? 'bg-gray-500 cursor-not-allowed' : 'bg-gray-900 hover:bg-gray-800'
+                    }`}
                 >
                   {isLoading ? 'Sending...' : 'Submit'}
                 </Button>
