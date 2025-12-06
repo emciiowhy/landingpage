@@ -6,7 +6,6 @@ import { contactMessages } from "../db/schema";
 const router = Router();
 
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
-const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL || "";
 
 // ✅ Create Gmail transporter with timeout
 const transporter = nodemailer.createTransport({
@@ -34,7 +33,7 @@ transporter.verify(function (error, success) {
   }
 });
 
-// ✅ POST /api/contact - Save to DB, send to Make.com, and send emails
+// ✅ POST /api/contact - Save to DB and send emails
 router.post("/", async (req: Request, res: Response) => {
   try {
     const { firstName, lastName, email, phone, company, message } = req.body;
@@ -57,21 +56,6 @@ router.post("/", async (req: Request, res: Response) => {
 
     console.log("✅ Message saved:", saved[0]);
 
-    // ✅ Send to Make.com webhook for AI lead qualification
-    if (MAKE_WEBHOOK_URL) {
-      sendToMakeWebhook({
-        name: fullName,
-        firstName,
-        lastName,
-        email,
-        phone: phone || '',
-        company: company || '',
-        message,
-        source: 'website-contact-form',
-        timestamp: new Date().toISOString(),
-      }).catch((err) => console.error("❌ Make.com webhook failed:", err));
-    }
-
     // ✅ Send emails in background
     sendEmailsAsync(fullName, email, message).catch(console.error);
 
@@ -88,38 +72,6 @@ router.post("/", async (req: Request, res: Response) => {
     });
   }
 });
-
-// ✅ Send data to Make.com webhook
-async function sendToMakeWebhook(data: {
-  name: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  source: string;
-  timestamp: string;
-}) {
-  try {
-    const response = await fetch(MAKE_WEBHOOK_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Make.com webhook failed: ${response.status}`);
-    }
-
-    console.log('✅ Data sent to Make.com successfully');
-  } catch (error) {
-    console.error('❌ Failed to send to Make.com:', error);
-    throw error;
-  }
-}
 
 // ✅ Background task to handle email delivery via Gmail
 async function sendEmailsAsync(name: string, email: string, message: string) {
