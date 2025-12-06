@@ -107,12 +107,14 @@ async function sendToMakeWebhook(data: {
 // ✅ Background task to handle email delivery via Gmail
 async function sendEmailsAsync(name: string, email: string, message: string) {
   console.log('🔧 Starting email sending process...');
+  console.log('📧 Gmail User:', process.env.GMAIL_USER);
+  console.log('🔑 Gmail Password exists:', !!process.env.GMAIL_APP_PASSWORD);
   console.log('📧 Sending to:', email);
   
   try {
     // Admin notification
     console.log('📤 Attempting to send admin notification...');
-    await transporter.sendMail({
+    const adminInfo = await transporter.sendMail({
       from: '"Portfolio Contact" <mcmcyap07@gmail.com>',
       to: ADMIN_EMAIL,
       subject: `📨 New message from ${name}`,
@@ -123,11 +125,11 @@ async function sendEmailsAsync(name: string, email: string, message: string) {
         <p><strong>Message:</strong><br>${message}</p>
       `,
     });
-    console.log(`✅ Admin notified at ${ADMIN_EMAIL}`);
+    console.log(`✅ Admin notified at ${ADMIN_EMAIL}`, adminInfo.messageId);
 
     // Auto-reply to user
     console.log('📤 Attempting to send auto-reply to visitor...');
-    await transporter.sendMail({
+    const replyInfo = await transporter.sendMail({
       from: '"Mc Zaldy" <mcmcyap07@gmail.com>',
       to: email,
       subject: `Thanks for reaching out, ${name.split(" ")[0]}!`,
@@ -137,9 +139,10 @@ async function sendEmailsAsync(name: string, email: string, message: string) {
         <p>Regards,<br><strong>Mc Zaldy</strong></p>
       `,
     });
-    console.log(`✅ Auto-reply sent to ${email}`);
-  } catch (err) {
-    console.error("❌ Email sending failed:", err);
+    console.log(`✅ Auto-reply sent to ${email}`, replyInfo.messageId);
+  } catch (err: any) {
+    console.error("❌ Email sending failed:", err.message);
+    console.error("❌ Full error:", err);
   }
 }
 
