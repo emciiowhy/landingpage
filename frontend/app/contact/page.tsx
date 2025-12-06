@@ -40,7 +40,7 @@ export default function ContactPage() {
   // ✅ Auto-switch between dev and production backend
   const backendUrl =
     process.env.NODE_ENV === 'production'
-      ? 'https://my-portfolio-e4bf.onrender.com'
+      ? 'https://my-portfolio-backend-rv94.onrender.com'
       : 'http://localhost:5000';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
