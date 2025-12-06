@@ -1,6 +1,6 @@
 // ==============================================
 // FILE: app/projects/page.tsx
-// Projects/Experience page showcasing professional experience
+// Projects/Experience page showcasing professional experience and projects
 // ==============================================
 
 'use client';
@@ -11,13 +11,44 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, Briefcase } from 'lucide-react';
+import { Search, Briefcase, ExternalLink, Github } from 'lucide-react';
 
 export default function ProjectsPage() {
   // ==========================================
-  // PROFESSIONAL EXPERIENCE DATA
+  // PROJECTS & PROFESSIONAL EXPERIENCE DATA
   // ==========================================
   const allExperiences = [
+    // RECENT PROJECTS
+    {
+      id: 5,
+      title: 'Carshey Philippines',
+      company: 'E-Commerce Platform',
+      period: '2025',
+      description:
+        'A modern e-commerce platform for automotive parts and accessories in the Philippines. Features include product catalog, shopping cart, user authentication, and secure checkout process.',
+      tags: ['Next.js', 'React', 'E-Commerce', 'Web Development', 'Tailwind CSS'],
+      image: '/images/projects/carshey.png',
+      type: 'Project',
+      category: 'Web Development',
+      liveUrl: 'https://carsheyph.vercel.app/',
+      featured: true,
+    },
+    {
+      id: 6,
+      title: 'Lazapee E-Commerce',
+      company: 'Online Shopping Platform',
+      period: '2025',
+      description:
+        'A full-featured e-commerce website with product listings, search functionality, cart management, and checkout flow. Built with modern web technologies for optimal performance.',
+      tags: ['Next.js', 'TypeScript', 'E-Commerce', 'Responsive Design', 'UI/UX'],
+      image: '/images/projects/lazapee.png',
+      type: 'Project',
+      category: 'Web Development',
+      liveUrl: 'https://lazapee-mauve.vercel.app/',
+      featured: true,
+    },
+    
+    // PROFESSIONAL EXPERIENCE
     {
       id: 1,
       title: 'Data Scraper',
@@ -77,7 +108,7 @@ export default function ProjectsPage() {
   // ==========================================
   // FILTERING LOGIC
   // ==========================================
-  const categories = ['All', 'Data Analysis', 'Market Research', 'Education'];
+  const categories = ['All', 'Web Development', 'Data Analysis', 'Market Research', 'Education'];
 
   const filteredExperiences = allExperiences.filter((exp) => {
     const matchesCategory = selectedCategory === 'All' || exp.category === selectedCategory;
@@ -96,9 +127,9 @@ export default function ProjectsPage() {
       {/* HEADER SECTION */}
       <section className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">My Professional Journey</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects & Experience</h1>
           <p className="text-lg text-gray-600">
-            A collection of my professional experience showcasing my skills in data analysis,
+            Showcasing my recent web development projects and professional experience in data analysis,
             communication, and continuous learning.
           </p>
         </div>
@@ -109,7 +140,7 @@ export default function ProjectsPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <Input
               type="text"
-              placeholder="Search experience..."
+              placeholder="Search projects and experience..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
@@ -131,12 +162,21 @@ export default function ProjectsPage() {
           ))}
         </div>
 
+        {/* FEATURED PROJECTS BANNER */}
+        {selectedCategory === 'All' && !searchQuery && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-center mb-6">Featured Projects</h2>
+          </div>
+        )}
+
         {/* EXPERIENCE GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {filteredExperiences.map((exp) => (
             <Card
               key={exp.id}
-              className="card border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className={`card border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                exp.featured ? 'ring-2 ring-blue-500' : ''
+              }`}
             >
               {/* IMAGE OR ICON HEADER */}
               <div className="relative w-full h-48 bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center overflow-hidden rounded-t-xl">
@@ -144,11 +184,16 @@ export default function ProjectsPage() {
                   <img
                     src={exp.image}
                     alt={exp.title}
-                    className="w-full h-full object-contain p-100 w-100 transition-transform duration-500 hover:scale-205"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     loading="lazy"
                   />
                 ) : (
                   <span className="text-7xl">{exp.icon}</span>
+                )}
+                {exp.featured && (
+                  <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    Featured
+                  </div>
                 )}
               </div>
 
@@ -158,6 +203,17 @@ export default function ProjectsPage() {
                   <Badge variant="secondary" className="mb-2">
                     {exp.type}
                   </Badge>
+                  {exp.liveUrl && (
+                    <a
+                      href={exp.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
+                      aria-label={`Visit ${exp.title}`}
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  )}
                 </div>
                 <CardTitle className="text-xl mb-1">{exp.title}</CardTitle>
                 <p className="text-sm font-semibold text-gray-700">{exp.company}</p>
@@ -166,13 +222,34 @@ export default function ProjectsPage() {
               </CardHeader>
 
               <CardContent>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {exp.tags.map((tag) => (
                     <Badge key={tag} variant="outline" className="text-xs">
                       {tag}
                     </Badge>
                   ))}
                 </div>
+
+                {/* PROJECT LINKS */}
+                {exp.liveUrl && (
+                  <div className="flex gap-3 mt-4 pt-4 border-t border-gray-200">
+                    <a
+                      href={exp.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="w-full bg-gray-900 hover:bg-gray-800"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Live
+                      </Button>
+                    </a>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -182,7 +259,7 @@ export default function ProjectsPage() {
         {filteredExperiences.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">
-              No experience found. Try adjusting your search or filter.
+              No results found. Try adjusting your search or filter.
             </p>
           </div>
         )}
