@@ -4,9 +4,8 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon --exec tsx src/server.ts",
-    "start": "tsx src/server.ts",
     "build": "tsc",
-    "start:prod": "node dist/server.js"
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
