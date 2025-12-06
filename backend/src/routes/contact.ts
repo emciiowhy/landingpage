@@ -8,11 +8,12 @@ const router = Router();
 // ✅ Initialize Resend once
 const resend = new Resend(process.env.RESEND_API_KEY || "");
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
+const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL || "";
 
-// ✅ POST /api/contact - Save to DB and send emails
+// ✅ POST /api/contact - Save to DB, send to Make.com, and send emails
 router.post("/", async (req: Request, res: Response) => {
   try {
-    const { firstName, lastName, email, message } = req.body;
+    const { firstName, lastName, email, phone, company, message } = req.body;
 
     if (!firstName?.trim() || !lastName?.trim() || !email?.trim() || !message?.trim()) {
       return res.status(400).json({
@@ -21,7 +22,8 @@ router.post("/", async (req: Request, res: Response) => {
       });
     }
 
-    console.log("📨 Contact form received:", { firstName, lastName, email });
+    const fullName = `${firstName} ${lastName}`;
+    console.log("📨 Contact form received:", { firstName, lastName, email, company });
 
     // ✅ Save message into DB
     const saved = await db
@@ -31,8 +33,23 @@ router.post("/", async (req: Request, res: Response) => {
 
     console.log("✅ Message saved:", saved[0]);
 
+    // ✅ Send to Make.com webhook for AI lead qualification
+    if (MAKE_WEBHOOK_URL) {
+      sendToMakeWebhook({
+        name: fullName,
+        firstName,
+        lastName,
+        email,
+        phone: phone || '',
+        company: company || '',
+        message,
+        source: 'website-contact-form',
+        timestamp: new Date().toISOString(),
+      }).catch((err) => console.error("❌ Make.com webhook failed:", err));
+    }
+
     // ✅ Send emails in background
-    sendEmailsAsync(`${firstName} ${lastName}`, email, message).catch(console.error);
+    sendEmailsAsync(fullName, email, message).catch(console.error);
 
     res.status(200).json({
       success: true,
@@ -47,6 +64,38 @@ router.post("/", async (req: Request, res: Response) => {
     });
   }
 });
+
+// ✅ Send data to Make.com webhook
+async function sendToMakeWebhook(data: {
+  name: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  source: string;
+  timestamp: string;
+}) {
+  try {
+    const response = await fetch(MAKE_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Make.com webhook failed: ${response.status}`);
+    }
+
+    console.log('✅ Data sent to Make.com successfully');
+  } catch (error) {
+    console.error('❌ Failed to send to Make.com:', error);
+    throw error;
+  }
+}
 
 // ✅ Background task to handle email delivery
 async function sendEmailsAsync(name: string, email: string, message: string) {
@@ -72,7 +121,7 @@ async function sendEmailsAsync(name: string, email: string, message: string) {
       subject: `Thanks for reaching out, ${name.split(" ")[0]}!`,
       html: `
         <p>Hi <strong>${name.split(" ")[0]}</strong>,</p>
-        <p>Thanks for your message — I’ve received it and will get back to you soon!</p>
+        <p>Thanks for your message — I've received it and will get back to you soon!</p>
         <p>Regards,<br><strong>Mc Zaldy</strong></p>
       `,
     });

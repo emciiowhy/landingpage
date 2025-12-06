@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { 
   Mail, Phone, MessageSquare, Linkedin, Github, Twitter, Facebook, 
-  CheckCircle, AlertCircle 
+  CheckCircle, AlertCircle, Building2
 } from 'lucide-react';
 
 // ✅ Helper: Fetch with timeout
@@ -25,6 +25,8 @@ export default function ContactPage() {
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
+    company: '',
     message: ''
   });
 
@@ -60,7 +62,15 @@ export default function ContactPage() {
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            name: `${formData.firstName} ${formData.lastName}`,
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            message: formData.message,
+          }),
         },
         10000
       );
@@ -73,7 +83,14 @@ export default function ContactPage() {
           type: 'success',
           message: 'You successfully sent your message!',
         });
-        setFormData({ firstName: '', lastName: '', email: '', message: '' });
+        setFormData({ 
+          firstName: '', 
+          lastName: '', 
+          email: '', 
+          phone: '',
+          company: '',
+          message: '' 
+        });
         setShowToast(true);
 
         // ✅ Hide toast after 4s
@@ -125,7 +142,7 @@ export default function ContactPage() {
       {/* ✅ Floating Toast Notification */}
       {showToast && (
         <div
-          className="fixed top-6 right-6 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 animate-fade-in"
+          className="fixed top-6 right-6 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 animate-fade-in z-50"
           role="status"
           aria-live="polite"
         >
@@ -242,6 +259,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       disabled={isLoading}
+                      placeholder="John"
                     />
                   </div>
                   <div>
@@ -256,6 +274,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       disabled={isLoading}
+                      placeholder="Doe"
                     />
                   </div>
                 </div>
@@ -272,6 +291,38 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     disabled={isLoading}
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number <span className="text-gray-400 font-normal">(Optional)</span>
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    disabled={isLoading}
+                    placeholder="+63 912 345 6789"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                    <Building2 className="h-4 w-4" />
+                    Company <span className="text-gray-400 font-normal">(Optional)</span>
+                  </label>
+                  <Input
+                    id="company"
+                    name="company"
+                    type="text"
+                    value={formData.company}
+                    onChange={handleChange}
+                    disabled={isLoading}
+                    placeholder="Acme Inc."
                   />
                 </div>
 
@@ -288,7 +339,7 @@ export default function ContactPage() {
                     required
                     maxLength={500}
                     rows={5}
-                    placeholder="Write your message here..."
+                    placeholder="Tell me about your project or inquiry..."
                     disabled={isLoading}
                   />
                 </div>
