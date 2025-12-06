@@ -7,21 +7,18 @@ const router = Router();
 
 const ADMIN_EMAIL = process.env.EMAIL_TO || "mcmcyap07@gmail.com";
 
-// ✅ Create Gmail transporter with timeout
+// ✅ Create Gmail transporter with port 465 (better for hosting platforms)
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
-  port: 587,
-  secure: false, // use TLS
+  port: 465,
+  secure: true, // use SSL
   auth: {
     user: process.env.GMAIL_USER || 'mcmcyap07@gmail.com',
     pass: process.env.GMAIL_APP_PASSWORD || 'kncoorrokjochxuc',
   },
-  connectionTimeout: 10000,
-  greetingTimeout: 10000,
-  socketTimeout: 10000,
-  tls: {
-    rejectUnauthorized: false
-  }
+  connectionTimeout: 15000,
+  greetingTimeout: 15000,
+  socketTimeout: 15000,
 });
 
 // ✅ Verify connection on startup
