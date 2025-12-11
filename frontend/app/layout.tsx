@@ -24,12 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google AdSense */}
+        {/* Google AdSense Auto Ads Script */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5622672077865707"
           crossOrigin="anonymous"
         ></script>
+
+        {/* Google AdSense Verification Meta Tag */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-5622672077865707"
+        />
       </head>
 
       <body className={inter.className}>
@@ -37,7 +43,9 @@ export default function RootLayout({
         <Navigation />
 
         {/* Main content area */}
-        <main className="min-h-screen pt-16">{children}</main>
+        <main className="min-h-screen pt-16">
+          {children}
+        </main>
 
         {/* Footer appears at the bottom of every page */}
         <Footer />
