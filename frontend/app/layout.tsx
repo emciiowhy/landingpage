@@ -24,30 +24,30 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Google AdSense Verification Meta Tag */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-5622672077865707"
+        />
+
         {/* Google AdSense Auto Ads Script */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5622672077865707"
           crossOrigin="anonymous"
         ></script>
-
-        {/* Google AdSense Verification Meta Tag */}
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-5622672077865707"
-        />
       </head>
 
       <body className={inter.className}>
         {/* Navigation appears at the top of every page */}
         <Navigation />
 
-        {/* Main content area */}
+        {/* Main content */}
         <main className="min-h-screen pt-16">
           {children}
         </main>
 
-        {/* Footer appears at the bottom of every page */}
+        {/* Footer */}
         <Footer />
       </body>
     </html>
