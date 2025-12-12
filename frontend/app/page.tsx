@@ -1,16 +1,13 @@
-// app/page.tsx
-
 'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, MessageCircle, Github, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { ArrowRight, MessageCircle, Github, Linkedin, Twitter, Facebook, Briefcase, ExternalLink } from 'lucide-react';
 
 export default function HomePage() {
-  // Featured experiences with images - Updated with PNG support and fallback
   const featuredExperiences = [
     {
       id: 1,
@@ -41,7 +38,30 @@ export default function HomePage() {
     },
   ];
 
-  // Social media links - Updated with your actual links
+  // Featured projects
+  const featuredProjects = [
+    {
+      id: 5,
+      title: 'Carshey Philippines',
+      company: 'E-Commerce Platform',
+      period: '2025',
+      description: 'Modern e-commerce platform for automotive parts and accessories with catalog, cart, secure checkout, and user accounts.',
+      tags: ['Next.js', 'React', 'E-Commerce', 'Web Development', 'Tailwind CSS'],
+      image: '/images/projects/carshey.png',
+      liveUrl: 'https://carsheyph.vercel.app/',
+    },
+    {
+      id: 6,
+      title: 'Lazapee E-Commerce',
+      company: 'Online Shopping Platform',
+      period: '2025',
+      description: 'Full-featured e-commerce website with search, responsive layout, cart system, and fast performance.',
+      tags: ['Next.js', 'TypeScript', 'E-Commerce', 'Responsive Design', 'UI/UX'],
+      image: '/images/projects/lazapee.png',
+      liveUrl: 'https://lazapee-mauve.vercel.app/',
+    },
+  ];
+
   const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/in/emciiowhy', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/emciiowhy', label: 'GitHub' },
@@ -51,33 +71,25 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Matching Ariel Batoon's layout */}
+      {/* Hero Section */}
       <section className="w-full px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
-          {/* Left Column - Text Content */}
+          {/* Left Column */}
           <div className="space-y-6">
-            {/* Message me badge with hover effect */}
             <Link href="/contact" className="inline-block group">
               <div className="flex items-center space-x-2 text-emerald-600 cursor-pointer">
                 <div className="w-2 h-2 bg-emerald-600 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium group-hover:underline">Message me</span>
               </div>
             </Link>
-
-            {/* Main Heading with waving hand */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-              Hey, I'm Mc{' '}
-              <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
+              Hey, I'm Mc <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
             </h1>
-
-            {/* Description */}
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
               Motivated and versatile professional with experience in data scraping, telephone 
               interviewing, ESL teaching, and sales engagement. Currently pursuing a Bachelor of 
               Science in Information Technology.
             </p>
-
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/contact">
                 <Button size="lg" className="w-full sm:w-auto bg-gray-900 hover:bg-gray-800">
@@ -91,20 +103,11 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
-
-            {/* Social Links */}
             <div className="flex space-x-4 pt-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-gray-900 transition-colors"
-                    aria-label={social.label}
-                  >
+                  <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors" aria-label={social.label}>
                     <Icon className="h-6 w-6" />
                   </a>
                 );
@@ -112,97 +115,59 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column - Profile Image */}
+          {/* Right Column */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px]">
-              {/* Decorative background blur - positioned behind image */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-50 -z-10"></div>
-
-              {/* Profile Image */}
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/profile.jpg"
-                  alt="Mc Zaldy Yap"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+                <Image src="/images/profile.jpg" alt="Mc Zaldy Yap" fill className="object-cover" priority />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Recent Experience Section */}
-      <section className="section-container bg-white">
+      {/* Featured Projects Section */}
+      <section className="section-container py-16 bg-white">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-            Recent Experience
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Check out my recent work
-          </h2>
+          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I've worked on a variety of roles, from data analysis to teaching. 
-            Here are a few of my recent experiences.
+            Some of my highlighted web development projects.
           </p>
         </div>
-
-        {/* Experience Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredExperiences.map((exp) => (
-            <Card key={exp.id} className="border-0 shadow-md hover:shadow-xl transition-shadow duration-300">
-              {/* Experience Image */}
-              <div className="relative w-full h-64 bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
-                <Image
-                  src={exp.image}
-                  alt={exp.title}
-                  fill
-                  className="object-cover"
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {featuredProjects.map((proj) => (
+            <Card key={proj.id} className="border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="relative w-full h-64 bg-gray-100">
+                <Image src={proj.image} alt={proj.title} fill className="object-cover" />
               </div>
-
               <CardHeader>
-                <CardTitle className="text-xl mb-1">{exp.title}</CardTitle>
-                <p className="text-sm font-semibold text-gray-700">{exp.company}</p>
-                <p className="text-xs text-gray-500 mt-1">{exp.period}</p>
-                <CardDescription className="mt-3 line-clamp-3">
-                  {exp.description}
-                </CardDescription>
+                <CardTitle className="text-xl">{proj.title}</CardTitle>
+                <p className="text-sm font-semibold text-gray-700">{proj.company}</p>
+                <p className="text-xs text-gray-500 mt-1">{proj.period}</p>
+                <CardDescription className="mt-3 line-clamp-3">{proj.description}</CardDescription>
               </CardHeader>
-
               <CardContent>
-                {/* Skills Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {exp.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
-                      {tag}
-                    </Badge>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {proj.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
                   ))}
                 </div>
+                {proj.liveUrl && (
+                  <Link href={proj.liveUrl} target="_blank" className="block">
+                    <Button className="w-full bg-gray-900 hover:bg-gray-800">View Live</Button>
+                  </Link>
+                )}
               </CardContent>
             </Card>
           ))}
         </div>
-
-        {/* View All Link */}
-        <div className="text-center mt-12">
-          <Link 
-            href="/projects" 
-            className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors"
-          >
-            More experience
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-container">
+      <section className="section-container py-16">
         <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 md:p-16 text-center text-white">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Need help building something?
-          </h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Need help building something?</h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Whether you're searching for a dedicated partner to develop your project or 
             simply need expert support, I'm here to help.
