@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MessageCircle, Github, Linkedin, Twitter, Facebook, Briefcase, ExternalLink } from 'lucide-react';
 
 export default function HomePage() {
+  // Featured experiences
   const featuredExperiences = [
     {
       id: 1,
@@ -62,6 +63,7 @@ export default function HomePage() {
     },
   ];
 
+  // Social links
   const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/in/emciiowhy', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/emciiowhy', label: 'GitHub' },
@@ -124,6 +126,44 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Experiences Section */}
+      <section className="section-container py-16 bg-gray-50">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Recent Experience</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            I've worked on a variety of roles, from data analysis to teaching. Here are a few of my recent experiences.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {featuredExperiences.map((exp) => (
+            <Card key={exp.id} className="border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="relative w-full h-64 bg-gray-100">
+                <Image src={exp.image} alt={exp.title} fill className="object-cover" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">{exp.title}</CardTitle>
+                <p className="text-sm font-semibold text-gray-700">{exp.company}</p>
+                <p className="text-xs text-gray-500 mt-1">{exp.period}</p>
+                <CardDescription className="mt-3 line-clamp-3">{exp.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {exp.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link href="/projects" className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors">
+            More experience
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </section>
 
