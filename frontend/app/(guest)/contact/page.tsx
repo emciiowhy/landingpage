@@ -138,11 +138,11 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 relative">
+    <div className="min-h-screen bg-background relative">
       {/* ✅ Floating Toast Notification */}
       {showToast && (
         <div
-          className="fixed top-6 right-6 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 animate-fade-in z-50"
+          className="fixed top-6 right-6 bg-emerald-600 text-emerald-50 px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 animate-fade-in z-50"
           role="status"
           aria-live="polite"
         >
@@ -154,7 +154,7 @@ export default function ContactPage() {
       <section className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Let's get in touch!</h1>
-          <p className="text-lg text-gray-600">You can reach me at the following</p>
+          <p className="text-lg text-muted-foreground">You can reach me at the following</p>
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -163,21 +163,21 @@ export default function ContactPage() {
             {contactMethods.map((method) => {
               const Icon = method.icon;
               return (
-                <Card key={method.title} className="bg-gray-900 text-white border-0">
+                <Card key={method.title} className="bg-foreground text-background border-0">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-gray-800 p-3 rounded-lg">
+                      <div className="bg-background/10 p-3 rounded-lg">
                         <Icon className="h-6 w-6" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-1">{method.title}</h3>
                         <a
                           href={method.href}
-                          className="text-white hover:text-gray-300 transition-colors block mb-2"
+                          className="text-background hover:text-background/80 transition-colors block mb-2"
                         >
                           {method.value}
                         </a>
-                        <p className="text-sm text-gray-400 flex items-center">
+                        <p className="text-sm text-background/80 flex items-center">
                           <MessageSquare className="h-4 w-4 mr-2" />
                           {method.description}
                         </p>
@@ -189,10 +189,10 @@ export default function ContactPage() {
             })}
 
             {/* Social Links */}
-            <Card className="bg-gray-900 text-white border-0">
+            <Card className="bg-foreground text-background border-0">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-gray-800 p-3 rounded-lg">
+                  <div className="bg-background/10 p-3 rounded-lg">
                     <MessageSquare className="h-6 w-6" />
                   </div>
                   <div className="flex-1">
@@ -206,7 +206,7 @@ export default function ContactPage() {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors"
+                            className="bg-background/10 hover:bg-background/20 p-3 rounded-lg transition-colors"
                             aria-label={social.label}
                           >
                             <Icon className="h-5 w-5" />
@@ -221,10 +221,10 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column - Form */}
-          <Card className="border-0 shadow-lg">
+          <Card className="border border-border shadow-lg bg-card">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold mb-2">Let's get in touch</h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-muted-foreground mb-6">
                 Whether you have a project or just want to connect, I'd love to hear from you.
               </p>
 
@@ -247,7 +247,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
                     <Input
@@ -262,7 +262,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
                       Last Name
                     </label>
                     <Input
@@ -279,7 +279,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
                   <Input
@@ -295,8 +295,8 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number <span className="text-gray-400 font-normal">(Optional)</span>
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    Phone Number <span className="text-muted-foreground font-normal">(Optional)</span>
                   </label>
                   <Input
                     id="phone"
@@ -310,9 +310,9 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2 flex items-center gap-2">
                     <Building2 className="h-4 w-4" />
-                    Company <span className="text-gray-400 font-normal">(Optional)</span>
+                    Company <span className="text-muted-foreground font-normal">(Optional)</span>
                   </label>
                   <Input
                     id="company"
@@ -326,9 +326,9 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     How can I help you?{' '}
-                    <span className="text-gray-400 font-normal">Max 500 characters</span>
+                    <span className="text-muted-foreground font-normal">Max 500 characters</span>
                   </label>
                   <Textarea
                     id="message"
@@ -346,8 +346,9 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className={`w-full py-6 text-lg text-white ${isLoading ? 'bg-gray-500 cursor-not-allowed' : 'bg-gray-900 hover:bg-gray-800'
-                    }`}
+                  className={`w-full py-6 text-lg text-primary-foreground ${
+                    isLoading ? 'bg-muted cursor-not-allowed' : 'bg-primary hover:bg-primary/90'
+                  }`}
                 >
                   {isLoading ? 'Sending...' : 'Submit'}
                 </Button>

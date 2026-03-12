@@ -48,16 +48,16 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="text-lg font-bold text-foreground mb-2">
               Mc Zaldy Yap
             </h3>
-            <p className="text-sm text-gray-600 mb-4">Software Developer</p>
-            <p className="text-sm text-gray-500 flex items-center">
+            <p className="text-sm text-muted-foreground mb-4">Software Developer</p>
+            <p className="text-sm text-muted-foreground flex items-center">
               <span className="mr-2">📍</span>
               Cebu, Philippines
             </p>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Pages Section */}
           <div className="col-span-1">
-            <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">
+            <h4 className="text-sm font-semibold text-foreground uppercase mb-4">
               Pages
             </h4>
             <ul className="space-y-2">
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Resources Section */}
           <div className="col-span-1">
-            <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">
+            <h4 className="text-sm font-semibold text-foreground uppercase mb-4">
               Resources
             </h4>
             <ul className="space-y-2">
@@ -94,7 +94,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </a>
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Connect Section */}
           <div className="col-span-1">
-            <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">
+            <h4 className="text-sm font-semibold text-foreground uppercase mb-4">
               Connect
             </h4>
             <div className="flex space-x-4">
@@ -117,7 +117,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                     aria-label={social.label}
                   >
                     <Icon className="h-5 w-5" />
@@ -129,8 +129,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-8 pt-8 border-t border-gray-200">
-          <p className="text-center text-sm text-gray-500">
+        <div className="mt-8 pt-8 border-t border-border">
+          <p className="text-center text-sm text-muted-foreground">
             © {currentYear} Mc Zaldy Yap. All rights reserved.
           </p>
         </div>

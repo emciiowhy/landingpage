@@ -129,12 +129,14 @@ export default function ProjectsPage() {
   // RENDER
   // ==========================================
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <section className="section-container py-16">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects & Experience</h1>
-          <p className="text-lg text-gray-600">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Projects &amp; Experience
+          </h1>
+          <p className="text-lg text-muted-foreground">
             A curated showcase of my web development work, professional background, and continuous learning.
           </p>
         </div>
@@ -142,7 +144,7 @@ export default function ProjectsPage() {
         {/* SEARCH */}
         <div className="max-w-xl mx-auto mb-8">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
             <Input
               type="text"
               placeholder="Search projects or experience..."
@@ -160,7 +162,7 @@ export default function ProjectsPage() {
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}
               onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? 'bg-gray-900 text-white' : ''}
+              className={selectedCategory === category ? '' : ''}
             >
               {category}
             </Button>
@@ -169,7 +171,9 @@ export default function ProjectsPage() {
 
         {/* FEATURED LABEL */}
         {selectedCategory === 'All' && !searchQuery && (
-          <h2 className="text-2xl font-bold text-center mb-10">Featured Projects</h2>
+          <h2 className="text-2xl font-bold text-center mb-10 text-foreground">
+            Featured Projects
+          </h2>
         )}
 
         {/* GRID */}
@@ -177,12 +181,12 @@ export default function ProjectsPage() {
           {filteredExperiences.map((exp) => (
             <Card
               key={exp.id}
-              className={`border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden ${
-                exp.featured ? 'ring-2 ring-blue-500' : ''
+              className={`border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card ${
+                exp.featured ? 'ring-2 ring-primary' : ''
               }`}
             >
               {/* IMAGE */}
-              <div className="relative w-full h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-muted flex items-center justify-center overflow-hidden">
                 {exp.image ? (
                   <img
                     src={exp.image}
@@ -191,10 +195,10 @@ export default function ProjectsPage() {
                     loading="lazy"
                   />
                 ) : (
-                  <span className="text-7xl">{exp.icon}</span>
+                  <span className="text-7xl text-foreground">{exp.icon}</span>
                 )}
                 {exp.featured && (
-                  <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                     Featured
                   </div>
                 )}
@@ -209,15 +213,15 @@ export default function ProjectsPage() {
                       href={exp.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-primary hover:text-primary/80"
                     >
                       <ExternalLink className="h-5 w-5" />
                     </a>
                   )}
                 </div>
-                <CardTitle className="text-xl">{exp.title}</CardTitle>
-                <p className="text-sm font-semibold text-gray-700">{exp.company}</p>
-                <p className="text-xs text-gray-500 mt-1">{exp.period}</p>
+                <CardTitle className="text-xl text-foreground">{exp.title}</CardTitle>
+                <p className="text-sm font-semibold text-muted-foreground">{exp.company}</p>
+                <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
                 <CardDescription className="mt-3 line-clamp-4">{exp.description}</CardDescription>
               </CardHeader>
 

@@ -38,10 +38,10 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-80 bg-gradient-to-br from-blue-500 to-purple-400">
-        <div className="absolute inset-0 bg-black opacity-20">
+        <div className="absolute inset-0 bg-black/40">
           <Image
             src="/images/building-bg.jpg"
             alt="Background"
@@ -53,7 +53,7 @@ export default function AboutPage() {
 
       {/* Profile Card */}
       <div className="section-container -mt-32 relative z-10">
-        <Card className="max-w-5xl mx-auto">
+        <Card className="max-w-5xl mx-auto bg-card border border-border">
           <CardContent className="p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8">
               {/* Profile Image */}
@@ -71,9 +71,11 @@ export default function AboutPage() {
               {/* Profile Info */}
               <div className="flex-1 text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl font-bold mb-2">Mc Zaldy Yap</h1>
-                <p className="text-xl text-gray-600 italic mb-6">Aspiring Full Stack Developer</p>
+                <p className="text-xl text-muted-foreground italic mb-6">
+                  Aspiring Full Stack Developer
+                </p>
 
-                <div className="space-y-4 text-gray-700 mb-6">
+                <div className="space-y-4 text-muted-foreground mb-6">
                   <p>
                     Hi! I'm <span className="font-semibold">Mc Zaldy Yap</span>, a passionate and dedicated
                     <span className="font-semibold"> Full-stack developer in the making</span> who’s driven by the goal of
@@ -99,7 +101,7 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <Button asChild className="bg-gray-900 hover:bg-gray-800">
+                <Button asChild>
                   <a href="/resume.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
@@ -116,27 +118,31 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Experience */}
           <div className="lg:col-span-2 space-y-8">
-            <Card>
+            <Card className="bg-card border border-border">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <Briefcase className="h-6 w-6 mr-2" />
-                  <h2 className="text-2xl font-bold">Experience</h2>
+                  <Briefcase className="h-6 w-6 mr-2 text-foreground" />
+                  <h2 className="text-2xl font-bold text-foreground">Experience</h2>
                 </div>
 
                 <div className="space-y-6">
                   {experiences.map((exp) => (
                     <div key={exp.id} className="flex gap-4">
                       <div className="flex flex-col items-center">
-                        <div className={`w-3 h-3 rounded-full ${exp.active ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`}></div>
+                        <div
+                          className={`w-3 h-3 rounded-full ${
+                            exp.active ? 'bg-emerald-500 animate-pulse' : 'bg-muted'
+                          }`}
+                        />
                         {exp.id !== experiences.length && (
-                          <div className="w-0.5 h-full bg-gray-200 mt-2"></div>
+                          <div className="w-0.5 h-full bg-border mt-2" />
                         )}
                       </div>
 
                       <div className="flex-1 pb-6">
-                        <h3 className="font-semibold text-lg">{exp.title}</h3>
-                        <p className="text-gray-600">{exp.company}</p>
-                        <p className="text-sm text-gray-500 mt-1">{exp.period}</p>
+                        <h3 className="font-semibold text-lg text-foreground">{exp.title}</h3>
+                        <p className="text-muted-foreground">{exp.company}</p>
+                        <p className="text-sm text-muted-foreground mt-1">{exp.period}</p>
                       </div>
                     </div>
                   ))}
@@ -147,24 +153,28 @@ export default function AboutPage() {
 
           {/* Contact Info + Socials */}
           <div className="space-y-6">
-            <Card>
+            <Card className="bg-card border border-border">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-lg mb-4">Contact</h3>
+                <h3 className="font-semibold text-lg mb-4 text-foreground">Contact</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info) => {
                     const Icon = info.icon;
                     const content = (
                       <div className="flex items-start gap-3">
-                        <Icon className="h-5 w-5 text-gray-400 mt-0.5" />
+                        <Icon className="h-5 w-5 text-muted-foreground mt-0.5" />
                         <div>
-                          <p className="text-xs text-gray-500">{info.label}</p>
-                          <p className="text-sm font-medium">{info.value}</p>
+                          <p className="text-xs text-muted-foreground">{info.label}</p>
+                          <p className="text-sm font-medium text-foreground">{info.value}</p>
                         </div>
                       </div>
                     );
 
                     return info.href ? (
-                      <a key={info.label} href={info.href} className="block hover:bg-gray-50 -mx-2 px-2 py-1 rounded">
+                      <a
+                        key={info.label}
+                        href={info.href}
+                        className="block hover:bg-muted -mx-2 px-2 py-1 rounded"
+                      >
                         {content}
                       </a>
                     ) : (
@@ -176,9 +186,9 @@ export default function AboutPage() {
             </Card>
 
             {/* Social Links */}
-            <Card>
+            <Card className="bg-card border border-border">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-lg mb-4">Socials</h3>
+                <h3 className="font-semibold text-lg mb-4 text-foreground">Socials</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
@@ -188,10 +198,12 @@ export default function AboutPage() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg transition-colors"
+                        className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg transition-colors"
                       >
-                        <Icon className="h-5 w-5 text-gray-600" />
-                        <span className="text-sm font-medium">{social.label}</span>
+                        <Icon className="h-5 w-5 text-muted-foreground" />
+                        <span className="text-sm font-medium text-foreground">
+                          {social.label}
+                        </span>
                       </a>
                     );
                   })}
@@ -203,16 +215,16 @@ export default function AboutPage() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="section-container bg-white">
+      <section className="section-container bg-background">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Tech Stacks</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Tech Stacks</h2>
           </div>
 
           <div className="space-y-8">
             {/* Frontend */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Frontend</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">Frontend</h3>
               <div className="flex flex-wrap gap-2">
                 {frontendStack.map((tech) => (
                   <Badge key={tech} variant="secondary" className="px-4 py-2 text-sm">
@@ -224,7 +236,7 @@ export default function AboutPage() {
 
             {/* Backend */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Backend</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">Backend</h3>
               <div className="flex flex-wrap gap-2">
                 {backendStack.map((tech) => (
                   <Badge key={tech} variant="secondary" className="px-4 py-2 text-sm">
@@ -236,7 +248,9 @@ export default function AboutPage() {
 
             {/* Authentication & Security */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Authentication & Security</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">
+                Authentication &amp; Security
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {authStack.map((tech) => (
                   <Badge key={tech} variant="secondary" className="px-4 py-2 text-sm">

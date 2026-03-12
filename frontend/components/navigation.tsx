@@ -21,13 +21,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <nav className="w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand Section */}
           <Link href="/" className="flex flex-col">
-            <span className="text-xl font-bold text-gray-900">Mc Zaldy Yap</span>
-            <span className="text-sm text-gray-600">Software Developer</span>
+            <span className="text-xl font-bold text-foreground">Mc Zaldy Yap</span>
+            <span className="text-sm text-muted-foreground">Software Developer</span>
           </Link>
 
           {/* Desktop Navigation - Hidden on mobile */}
@@ -36,7 +36,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
               >
                 {link.label}
               </Link>
@@ -46,27 +46,27 @@ export default function Navigation() {
           {/* Mobile Menu Button - Visible only on mobile */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg hover:bg-muted"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-900" />
+              <X className="h-6 w-6 text-foreground" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-900" />
+              <Menu className="h-6 w-6 text-foreground" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu - Slides down when menu button is clicked */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-border bg-background">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium px-2"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-2"
                 >
                   {link.label}
                 </Link>

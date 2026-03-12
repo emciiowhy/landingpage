@@ -72,12 +72,12 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="w-full px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-20">
+      <section className="w-full section-container py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
           {/* Left Column */}
-          <div className="space-y-6">
+          <div className="space-y-6 select-none">
             <Link href="/contact" className="inline-block group">
               <div className="flex items-center space-x-2 text-emerald-600 cursor-pointer">
                 <div className="w-2 h-2 bg-emerald-600 rounded-full animate-pulse"></div>
@@ -87,20 +87,20 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
               Hey, I'm Mc <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
               Motivated and versatile professional with experience in data scraping, telephone 
               interviewing, ESL teaching, and sales engagement. Currently pursuing a Bachelor of 
               Science in Information Technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/contact">
-                <Button size="lg" className="w-full sm:w-auto bg-gray-900 hover:bg-gray-800">
+                <Button size="lg" className="w-full sm:w-auto">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Free Consultation
                 </Button>
               </Link>
               <Link href="/projects">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-gray-900 hover:bg-gray-50">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto">
                   Explore Experience
                 </Button>
               </Link>
@@ -109,7 +109,14 @@ export default function HomePage() {
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
-                  <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors" aria-label={social.label}>
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label={social.label}
+                >
                     <Icon className="h-6 w-6" />
                   </a>
                 );
@@ -120,7 +127,7 @@ export default function HomePage() {
           {/* Right Column */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/30 dark:to-primary/10 rounded-full blur-3xl opacity-50 -z-10" />
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
                 <Image src="/images/profile.jpg" alt="Mc Zaldy Yap" fill className="object-cover" priority />
               </div>
@@ -130,23 +137,26 @@ export default function HomePage() {
       </section>
 
       {/* Featured Experiences Section */}
-      <section className="section-container py-16 bg-gray-50">
+      <section className="section-container py-16 bg-muted">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Recent Experience</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-foreground">Recent Experience</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I've worked on a variety of roles, from data analysis to teaching. Here are a few of my recent experiences.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {featuredExperiences.map((exp) => (
-            <Card key={exp.id} className="border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden">
-              <div className="relative w-full h-64 bg-gray-100">
+            <Card
+              key={exp.id}
+              className="border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card"
+            >
+              <div className="relative w-full h-64 bg-muted">
                 <Image src={exp.image} alt={exp.title} fill className="object-cover" />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl">{exp.title}</CardTitle>
-                <p className="text-sm font-semibold text-gray-700">{exp.company}</p>
-                <p className="text-xs text-gray-500 mt-1">{exp.period}</p>
+                <CardTitle className="text-xl text-foreground">{exp.title}</CardTitle>
+                <p className="text-sm font-semibold text-muted-foreground">{exp.company}</p>
+                <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
                 <CardDescription className="mt-3 line-clamp-3">{exp.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -168,23 +178,26 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="section-container py-16 bg-white">
+      <section className="section-container py-16 bg-background">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-foreground">Featured Projects</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Some of my highlighted web development projects.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {featuredProjects.map((proj) => (
-            <Card key={proj.id} className="border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden">
-              <div className="relative w-full h-64 bg-gray-100">
+            <Card
+              key={proj.id}
+              className="border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card"
+            >
+              <div className="relative w-full h-64 bg-muted">
                 <Image src={proj.image} alt={proj.title} fill className="object-cover" />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl">{proj.title}</CardTitle>
-                <p className="text-sm font-semibold text-gray-700">{proj.company}</p>
-                <p className="text-xs text-gray-500 mt-1">{proj.period}</p>
+                <CardTitle className="text-xl text-foreground">{proj.title}</CardTitle>
+                <p className="text-sm font-semibold text-muted-foreground">{proj.company}</p>
+                <p className="text-xs text-muted-foreground mt-1">{proj.period}</p>
                 <CardDescription className="mt-3 line-clamp-3">{proj.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -206,14 +219,14 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="section-container py-16">
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 md:p-16 text-center text-white">
+        <div className="bg-gradient-to-br from-foreground to-foreground/80 rounded-3xl p-12 md:p-16 text-center text-background">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Need help building something?</h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-background/80 max-w-2xl mx-auto mb-8">
             Whether you're searching for a dedicated partner to develop your project or 
             simply need expert support, I'm here to help.
           </p>
           <Link href="/contact">
-            <Button size="lg" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100">
+            <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-muted">
               Get in Touch
             </Button>
           </Link>

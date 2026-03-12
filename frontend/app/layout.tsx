@@ -1,13 +1,19 @@
 // app/layout.tsx
 
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
+import { ThemeProvider } from '@/components/provider/theme-provider';
 
-// Load Inter font from Google Fonts
-const inter = Inter({ subsets: ['latin'] });
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Mc Zaldy Yap - Software Developer',
@@ -22,15 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        {/* Google AdSense Verification Meta Tag */}
         <meta
           name="google-adsense-account"
           content="ca-pub-5622672077865707"
         />
-
-        {/* Google AdSense Auto Ads Script */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5622672077865707"
@@ -38,17 +41,17 @@ export default function RootLayout({
         ></script>
       </head>
 
-      <body className={inter.className}>
-        {/* Navigation appears at the top of every page */}
-        <Navigation />
-
-        {/* Main content */}
-        <main className="min-h-screen pt-16">
-          {children}
-        </main>
-
-        {/* Footer */}
-        <Footer />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="min-h-screen">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
