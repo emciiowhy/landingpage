@@ -22,9 +22,7 @@ export default function BlogsPage() {
                 href={`/blog/${post.slug}`}
                 className="block bg-card border border-border rounded-2xl px-6 py-5 md:px-8 md:py-6 hover:border-primary hover:shadow-lg transition-all"
               >
-                <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-1">
-                  {post.title}
-                </h2>
+                <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-1">{post.title}</h2>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3">
                   {post.date} • {post.author}
                 </p>
@@ -37,3 +35,4 @@ export default function BlogsPage() {
     </div>
   );
 }
+

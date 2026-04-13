@@ -113,13 +113,25 @@ export default function PricingPage() {
                   <div key={row.label} className="contents">
                     <div className="p-4 border-b border-border text-muted-foreground">{row.label}</div>
                     <div className="p-4 border-b border-border text-center">
-                      {row.free ? <span className="text-foreground">✓</span> : <span className="text-muted-foreground">—</span>}
+                      {row.free ? (
+                        <span className="text-foreground">✓</span>
+                      ) : (
+                        <span className="text-muted-foreground">—</span>
+                      )}
                     </div>
                     <div className="p-4 border-b border-border text-center">
-                      {row.standard ? <span className="text-foreground">✓</span> : <span className="text-muted-foreground">—</span>}
+                      {row.standard ? (
+                        <span className="text-foreground">✓</span>
+                      ) : (
+                        <span className="text-muted-foreground">—</span>
+                      )}
                     </div>
                     <div className="p-4 border-b border-border text-center">
-                      {row.enterprise ? <span className="text-foreground">✓</span> : <span className="text-muted-foreground">—</span>}
+                      {row.enterprise ? (
+                        <span className="text-foreground">✓</span>
+                      ) : (
+                        <span className="text-muted-foreground">—</span>
+                      )}
                     </div>
                   </div>
                 ))}

@@ -8,8 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MessageCircle, Github, Linkedin, Twitter, Facebook } from 'lucide-react';
 
 // Organized Imports
-import { BentoGrid } from "@/components/features/home/BentoGrid";
-import { RevealOnScroll } from "@/components/common/RevealOnScroll";
+import { BentoGrid } from '@/components/features/home/BentoGrid';
+import { RevealOnScroll } from '@/components/common/RevealOnScroll';
 
 export default function HomePage() {
   // Featured experiences
@@ -19,7 +19,8 @@ export default function HomePage() {
       title: 'Data Scraper',
       company: 'Lead Generation (Facebook Engagement Analysis)',
       period: '2022 – 2025',
-      description: 'Conducted 3 years of experience scraping and analyzing Facebook engagement data, including likes, shares, comments, and reach metrics.',
+      description:
+        'Conducted 3 years of experience scraping and analyzing Facebook engagement data, including likes, shares, comments, and reach metrics.',
       image: '/images/experience/data-scraper.png',
       tags: ['Data Scraping', 'Analytics', 'Facebook API'],
     },
@@ -28,7 +29,8 @@ export default function HomePage() {
       title: 'Telephone Interviewer',
       company: 'Dynata',
       period: 'May 2024 – November 2024',
-      description: 'Conducted outbound and inbound calls to gather opinions and feedback from US citizens for market research surveys.',
+      description:
+        'Conducted outbound and inbound calls to gather opinions and feedback from US citizens for market research surveys.',
       image: '/images/experience/telephone-interviewer.png',
       tags: ['Market Research', 'Communication', 'Data Collection'],
     },
@@ -37,7 +39,8 @@ export default function HomePage() {
       title: 'On-Call ESL Teacher',
       company: 'First English Global',
       period: '2022 – 6 months',
-      description: 'Taught basic English communication skills to foreign students, focusing on grammar, vocabulary, and conversational fluency.',
+      description:
+        'Taught basic English communication skills to foreign students, focusing on grammar, vocabulary, and conversational fluency.',
       image: '/images/experience/esl-teacher.png',
       tags: ['ESL Teaching', 'Communication', 'Mentoring'],
     },
@@ -50,7 +53,8 @@ export default function HomePage() {
       title: 'Carshey Philippines',
       company: 'E-Commerce Platform',
       period: '2025',
-      description: 'Modern e-commerce platform for automotive parts and accessories with catalog, cart, secure checkout, and user accounts.',
+      description:
+        'Modern e-commerce platform for automotive parts and accessories with catalog, cart, secure checkout, and user accounts.',
       tags: ['Next.js', 'React', 'E-Commerce', 'Web Development', 'Tailwind CSS'],
       image: '/images/projects/carshey.png',
       liveUrl: 'https://carsheyph.vercel.app/',
@@ -60,7 +64,8 @@ export default function HomePage() {
       title: 'Lazapee E-Commerce',
       company: 'Online Shopping Platform',
       period: '2025',
-      description: 'Full-featured e-commerce website with search, responsive layout, cart system, and fast performance.',
+      description:
+        'Full-featured e-commerce website with search, responsive layout, cart system, and fast performance.',
       tags: ['Next.js', 'TypeScript', 'E-Commerce', 'Responsive Design', 'UI/UX'],
       image: '/images/projects/lazapee.png',
       liveUrl: 'https://lazapee-mauve.vercel.app/',
@@ -89,12 +94,11 @@ export default function HomePage() {
               </div>
             </Link>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-              Hey, I'm Mc <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
+              Hey, I&apos;m Mc <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Motivated and versatile professional with experience in data scraping, telephone 
-              interviewing, ESL teaching, and sales engagement. Currently pursuing a Bachelor of 
-              Science in Information Technology.
+              Motivated and versatile professional with experience in data scraping, telephone interviewing, ESL
+              teaching, and sales engagement. Currently pursuing a Bachelor of Science in Information Technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/contact">
@@ -113,14 +117,14 @@ export default function HomePage() {
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label={social.label}
-                >
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label={social.label}
+                  >
                     <Icon className="h-6 w-6" />
                   </a>
                 );
@@ -153,7 +157,8 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-foreground">Recent Experience</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I've worked on a variety of roles, from data analysis to teaching. Here are a few of my recent experiences.
+              I&apos;ve worked on a variety of roles, from data analysis to teaching. Here are a few of my recent
+              experiences.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -174,7 +179,9 @@ export default function HomePage() {
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                      <Badge key={tag} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>
@@ -182,7 +189,10 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/projects" className="inline-flex items-center text-lg font-semibold hover:opacity-70 transition-opacity">
+            <Link
+              href="/projects"
+              className="inline-flex items-center text-lg font-semibold hover:opacity-70 transition-opacity"
+            >
               More experience
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
@@ -217,7 +227,9 @@ export default function HomePage() {
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {proj.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                      <Badge key={tag} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                   {proj.liveUrl && (
@@ -238,8 +250,8 @@ export default function HomePage() {
           <div className="bg-gradient-to-br from-foreground to-foreground/80 rounded-3xl p-12 md:p-16 text-center text-background">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Need help building something?</h2>
             <p className="text-lg md:text-xl text-background/80 max-w-2xl mx-auto mb-8">
-              Whether you're searching for a dedicated partner to develop your project or 
-              simply need expert support, I'm here to help.
+              Whether you&apos;re searching for a dedicated partner to develop your project or simply need expert
+              support, I&apos;m here to help.
             </p>
             <Link href="/contact">
               <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-muted">
@@ -252,3 +264,4 @@ export default function HomePage() {
     </div>
   );
 }
+

@@ -47,9 +47,7 @@ export default function FaqPage() {
                     <span className="text-base md:text-lg font-semibold text-foreground">{item.q}</span>
                     <span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span>
                   </summary>
-                  <div className="pt-3 text-sm md:text-base text-muted-foreground leading-relaxed">
-                    {item.a}
-                  </div>
+                  <div className="pt-3 text-sm md:text-base text-muted-foreground leading-relaxed">{item.a}</div>
                 </details>
               </CardContent>
             </Card>

@@ -1,121 +1,109 @@
-// ==============================================
-// FILE: app/projects/page.tsx (Improved Version)
-// Clean, consistent, optimized UI and code structure
-// ==============================================
-
 'use client';
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import Image from 'next/image';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Briefcase, ExternalLink } from 'lucide-react';
 
+// ==========================================
+// EXPERIENCES DATA - Moved outside to fix useMemo warnings
+// ==========================================
+const ALL_EXPERIENCES = [
+  {
+    id: 5,
+    title: 'Carshey Philippines',
+    company: 'E-Commerce Platform',
+    period: '2025',
+    description:
+      'A modern e-commerce platform for automotive parts and accessories. Includes catalog, cart, secure checkout, and user accounts.',
+    tags: ['Next.js', 'React', 'E-Commerce', 'Web Development', 'Tailwind CSS'],
+    image: '/images/projects/carshey.png',
+    type: 'Project',
+    category: 'Web Development',
+    liveUrl: 'https://carsheyph.vercel.app/',
+    featured: true,
+  },
+  {
+    id: 6,
+    title: 'Lazapee E-Commerce',
+    company: 'Online Shopping Platform',
+    period: '2025',
+    description:
+      'A full e-commerce website with advanced search, responsive layout, cart system, and fast performance using modern Next.js features.',
+    tags: ['Next.js', 'TypeScript', 'E-Commerce', 'Responsive Design', 'UI/UX'],
+    image: '/images/projects/lazapee.png',
+    type: 'Project',
+    category: 'Web Development',
+    liveUrl: 'https://lazapee-mauve.vercel.app/',
+    featured: true,
+  },
+  {
+    id: 1,
+    title: 'Data Scraper',
+    company: 'Lead Generation (Facebook Engagement Analysis)',
+    period: '2022 – 2025',
+    description:
+      'Scraped and analyzed Facebook engagement data (likes, shares, comments). Produced insights supporting digital marketing campaigns.',
+    tags: ['Data Scraping', 'Facebook API', 'Analytics', 'Marketing Research'],
+    image: '/images/icons/data-scraper.png',
+    type: 'Professional Experience',
+    category: 'Data Analysis',
+  },
+  {
+    id: 2,
+    title: 'Telephone Interviewer',
+    company: 'Dynata',
+    period: 'May 2024 – Nov 2024',
+    description:
+      'Handled outbound and inbound calls to collect market research responses while maintaining script accuracy and professionalism.',
+    tags: ['Market Research', 'Communication', 'Customer Service', 'Data Collection'],
+    image: '/images/icons/telephone-interviewer.png',
+    type: 'Professional Experience',
+    category: 'Market Research',
+  },
+  {
+    id: 3,
+    title: 'On-Call ESL Teacher',
+    company: 'First English Global',
+    period: '2022 – 6 months',
+    description:
+      'Taught English basics to foreign students, focusing on communication, grammar, and tailored learning activities.',
+    tags: ['ESL Teaching', 'Communication', 'Mentoring'],
+    image: '/images/icons/esl-teacher.png',
+    type: 'Professional Experience',
+    category: 'Education',
+  },
+  {
+    id: 4,
+    title: 'Education',
+    company: 'Cordova Public College',
+    period: '2023 - Present',
+    description:
+      'Bachelor of Science in Information Technology with focus on software development and databases.',
+    tags: ['Information Technology', 'Software Development', 'Web Development'],
+    icon: '🎓',
+    type: 'Education',
+    category: 'Education',
+  },
+];
+
+const CATEGORIES = ['All', 'Web Development', 'Data Analysis', 'Market Research', 'Education'];
+
 export default function ProjectsPage() {
-  // ==========================================
-  // EXPERIENCES DATA
-  // ==========================================
-  const allExperiences = [
-    {
-      id: 5,
-      title: 'Carshey Philippines',
-      company: 'E-Commerce Platform',
-      period: '2025',
-      description:
-        'A modern e-commerce platform for automotive parts and accessories. Includes catalog, cart, secure checkout, and user accounts.',
-      tags: ['Next.js', 'React', 'E-Commerce', 'Web Development', 'Tailwind CSS'],
-      image: '/images/projects/carshey.png',
-      type: 'Project',
-      category: 'Web Development',
-      liveUrl: 'https://carsheyph.vercel.app/',
-      featured: true,
-    },
-    {
-      id: 6,
-      title: 'Lazapee E-Commerce',
-      company: 'Online Shopping Platform',
-      period: '2025',
-      description:
-        'A full e-commerce website with advanced search, responsive layout, cart system, and fast performance using modern Next.js features.',
-      tags: ['Next.js', 'TypeScript', 'E-Commerce', 'Responsive Design', 'UI/UX'],
-      image: '/images/projects/lazapee.png',
-      type: 'Project',
-      category: 'Web Development',
-      liveUrl: 'https://lazapee-mauve.vercel.app/',
-      featured: true,
-    },
-
-    // EXPERIENCE
-    {
-      id: 1,
-      title: 'Data Scraper',
-      company: 'Lead Generation (Facebook Engagement Analysis)',
-      period: '2022 – 2025',
-      description:
-        'Scraped and analyzed Facebook engagement data (likes, shares, comments). Produced insights supporting digital marketing campaigns.',
-      tags: ['Data Scraping', 'Facebook API', 'Analytics', 'Marketing Research'],
-      image: '/images/icons/data-scraper.png',
-      type: 'Professional Experience',
-      category: 'Data Analysis',
-    },
-    {
-      id: 2,
-      title: 'Telephone Interviewer',
-      company: 'Dynata',
-      period: 'May 2024 – Nov 2024',
-      description:
-        'Handled outbound and inbound calls to collect market research responses while maintaining script accuracy and professionalism.',
-      tags: ['Market Research', 'Communication', 'Customer Service', 'Data Collection'],
-      image: '/images/icons/telephone-interviewer.png',
-      type: 'Professional Experience',
-      category: 'Market Research',
-    },
-    {
-      id: 3,
-      title: 'On-Call ESL Teacher',
-      company: 'First English Global',
-      period: '2022 – 6 months',
-      description:
-        'Taught English basics to foreign students, focusing on communication, grammar, and tailored learning activities.',
-      tags: ['ESL Teaching', 'Communication', 'Mentoring'],
-      image: '/images/icons/esl-teacher.png',
-      type: 'Professional Experience',
-      category: 'Education',
-    },
-    {
-      id: 4,
-      title: 'Education',
-      company: 'Cordova Public College',
-      period: '2023 - Present',
-      description:
-        'Bachelor of Science in Information Technology with focus on software development and databases.',
-      tags: ['Information Technology', 'Software Development', 'Web Development'],
-      icon: '🎓',
-      type: 'Education',
-      category: 'Education',
-    },
-  ];
-
   // ==========================================
   // STATE
   // ==========================================
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Web Development', 'Data Analysis', 'Market Research', 'Education'];
-
   // Optimized filtering using useMemo
   const filteredExperiences = useMemo(() => {
     const query = searchQuery.toLowerCase();
-    return allExperiences.filter((exp) => {
+    return ALL_EXPERIENCES.filter((exp) => {
       const matchesCategory = selectedCategory === 'All' || exp.category === selectedCategory;
       const matchesSearch =
         exp.title.toLowerCase().includes(query) ||
@@ -123,7 +111,7 @@ export default function ProjectsPage() {
         exp.description.toLowerCase().includes(query);
       return matchesCategory && matchesSearch;
     });
-  }, [allExperiences, selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery]);
 
   // ==========================================
   // RENDER
@@ -133,9 +121,7 @@ export default function ProjectsPage() {
       <section className="section-container py-16">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Projects &amp; Experience
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Projects &amp; Experience</h1>
           <p className="text-lg text-muted-foreground">
             A curated showcase of my web development work, professional background, and continuous learning.
           </p>
@@ -157,12 +143,11 @@ export default function ProjectsPage() {
 
         {/* CATEGORIES */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
+          {CATEGORIES.map((category) => (
             <Button
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}
               onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? '' : ''}
             >
               {category}
             </Button>
@@ -171,9 +156,7 @@ export default function ProjectsPage() {
 
         {/* FEATURED LABEL */}
         {selectedCategory === 'All' && !searchQuery && (
-          <h2 className="text-2xl font-bold text-center mb-10 text-foreground">
-            Featured Projects
-          </h2>
+          <h2 className="text-2xl font-bold text-center mb-10 text-foreground">Featured Projects</h2>
         )}
 
         {/* GRID */}
@@ -185,20 +168,22 @@ export default function ProjectsPage() {
                 exp.featured ? 'ring-2 ring-primary' : ''
               }`}
             >
-              {/* IMAGE */}
+              {/* IMAGE SECTION */}
               <div className="relative w-full h-48 bg-muted flex items-center justify-center overflow-hidden">
                 {exp.image ? (
-                  <img
+                  <Image
                     src={exp.image}
                     alt={exp.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                    loading="lazy"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={exp.featured}
                   />
                 ) : (
                   <span className="text-7xl text-foreground">{exp.icon}</span>
                 )}
                 {exp.featured && (
-                  <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                     Featured
                   </div>
                 )}
@@ -259,7 +244,7 @@ export default function ProjectsPage() {
             <Briefcase className="h-12 w-12 mx-auto mb-4 text-gray-700" />
             <h3 className="text-2xl font-bold mb-3">Interested in Working Together?</h3>
             <p className="text-gray-600 mb-6">
-              I’m open to opportunities in web development, data analysis, and customer service.
+              I&apos;m open to opportunities in web development, data analysis, and customer service.
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-gray-900 hover:bg-gray-800">

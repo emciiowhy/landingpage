@@ -11,7 +11,7 @@ export type BlogPost = {
 
 export type BlogCategory = {
   slug: string;
-  name: String;
+  name: string;
   parent?: string;
 }
 

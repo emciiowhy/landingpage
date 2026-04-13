@@ -70,3 +70,4 @@ export default function BlogPostPage({ params }: { params: { category?: string[]
     </div>
   );
 }
+

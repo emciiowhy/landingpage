@@ -6,17 +6,23 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  Mail, Phone, MessageSquare, Linkedin, Github, Twitter, Facebook,
-  CheckCircle, AlertCircle, Building2
+  Mail,
+  Phone,
+  MessageSquare,
+  Linkedin,
+  Github,
+  Twitter,
+  Facebook,
+  CheckCircle,
+  AlertCircle,
+  Building2,
 } from 'lucide-react';
 
 // ✅ Helper: Fetch with timeout
 const fetchWithTimeout = (url: string, options: RequestInit, timeout = 30000) => {
   return Promise.race([
     fetch(url, options),
-    new Promise<Response>((_, reject) =>
-      setTimeout(() => reject(new Error('Request timeout')), timeout)
-    )
+    new Promise<Response>((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeout)),
   ]);
 };
 
@@ -27,11 +33,11 @@ export default function ContactPage() {
     email: '',
     phone: '',
     company: '',
-    message: ''
+    message: '',
   });
 
   const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string; }>({
+  const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
     type: null,
     message: '',
   });
@@ -89,7 +95,7 @@ export default function ContactPage() {
           email: '',
           phone: '',
           company: '',
-          message: ''
+          message: '',
         });
         setShowToast(true);
 
@@ -119,14 +125,14 @@ export default function ContactPage() {
       title: 'Email',
       value: 'mcmcyap07@gmail.com',
       description: 'I usually reply within an hour.',
-      href: 'mailto:mcmcyap07@gmail.com'
+      href: 'mailto:mcmcyap07@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
       value: '+63 915 515 2314',
       description: 'Available weekdays 9AM–6PM',
-      href: 'tel:+639155152314'
+      href: 'tel:+639155152314',
     },
   ];
 
@@ -153,7 +159,7 @@ export default function ContactPage() {
 
       <section className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Let's get in touch!</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Let&apos;s get in touch!</h1>
           <p className="text-lg text-muted-foreground">You can reach me at the following</p>
         </div>
 
@@ -223,17 +229,18 @@ export default function ContactPage() {
           {/* Right Column - Form */}
           <Card className="border border-border shadow-lg bg-card">
             <CardContent className="p-8">
-              <h2 className="text-2xl font-bold mb-2">Let's get in touch</h2>
+              <h2 className="text-2xl font-bold mb-2">Let&apos;s get in touch</h2>
               <p className="text-muted-foreground mb-6">
-                Whether you have a project or just want to connect, I'd love to hear from you.
+                Whether you have a project or just want to connect, I&apos;d love to hear from you.
               </p>
 
               {status.type && (
                 <div
-                  className={`mb-6 p-4 rounded-lg flex items-start gap-3 ${status.type === 'success'
+                  className={`mb-6 p-4 rounded-lg flex items-start gap-3 ${
+                    status.type === 'success'
                       ? 'bg-green-50 text-green-800 border border-green-200'
                       : 'bg-red-50 text-red-800 border border-red-200'
-                    }`}
+                  }`}
                 >
                   {status.type === 'success' ? (
                     <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -310,7 +317,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2 flex items-center gap-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-foreground mb-2 flex items-center gap-2"
+                  >
                     <Building2 className="h-4 w-4" />
                     Company <span className="text-muted-foreground font-normal">(Optional)</span>
                   </label>
@@ -327,8 +337,7 @@ export default function ContactPage() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    How can I help you?{' '}
-                    <span className="text-muted-foreground font-normal">Max 500 characters</span>
+                    How can I help you? <span className="text-muted-foreground font-normal">Max 500 characters</span>
                   </label>
                   <Textarea
                     id="message"
@@ -360,3 +369,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

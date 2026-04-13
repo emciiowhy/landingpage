@@ -77,7 +77,7 @@ export default function AboutPage() {
 
                 <div className="space-y-4 text-muted-foreground mb-6">
                   <p>
-                    Hi! I'm <span className="font-semibold">Mc Zaldy Yap</span>, a passionate and dedicated
+                    Hi! I&apos;m <span className="font-semibold">Mc Zaldy Yap</span>, a passionate and dedicated
                     <span className="font-semibold"> Full-stack developer in the making</span> who’s driven by the goal of
                     building meaningful and efficient digital experiences.
                   </p>
@@ -265,3 +265,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
