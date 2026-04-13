@@ -5,7 +5,11 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, MessageCircle, Github, Linkedin, Twitter, Facebook, Briefcase, ExternalLink } from 'lucide-react';
+import { ArrowRight, MessageCircle, Github, Linkedin, Twitter, Facebook } from 'lucide-react';
+
+// Organized Imports
+import { BentoGrid } from "@/components/features/home/BentoGrid";
+import { RevealOnScroll } from "@/components/common/RevealOnScroll";
 
 export default function HomePage() {
   // Featured experiences
@@ -73,7 +77,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Hero Section - Usually kept without Reveal for immediate impact */}
       <section className="w-full section-container py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
           {/* Left Column */}
@@ -136,102 +140,115 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Experiences Section */}
-      <section className="section-container py-16 bg-muted">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">Recent Experience</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I've worked on a variety of roles, from data analysis to teaching. Here are a few of my recent experiences.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {featuredExperiences.map((exp) => (
-            <Card
-              key={exp.id}
-              className="border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card"
-            >
-              <div className="relative w-full h-64 bg-muted">
-                <Image src={exp.image} alt={exp.title} fill className="object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">{exp.title}</CardTitle>
-                <p className="text-sm font-semibold text-muted-foreground">{exp.company}</p>
-                <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
-                <CardDescription className="mt-3 line-clamp-3">{exp.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {exp.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <Link href="/projects" className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors">
-            More experience
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </section>
+      {/* Bento Grid with Reveal */}
+      <RevealOnScroll>
+        <section className="bg-background">
+          <BentoGrid />
+        </section>
+      </RevealOnScroll>
 
-      {/* Featured Projects Section */}
-      <section className="section-container py-16 bg-background">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">Featured Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Some of my highlighted web development projects.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {featuredProjects.map((proj) => (
-            <Card
-              key={proj.id}
-              className="border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card"
-            >
-              <div className="relative w-full h-64 bg-muted">
-                <Image src={proj.image} alt={proj.title} fill className="object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">{proj.title}</CardTitle>
-                <p className="text-sm font-semibold text-muted-foreground">{proj.company}</p>
-                <p className="text-xs text-muted-foreground mt-1">{proj.period}</p>
-                <CardDescription className="mt-3 line-clamp-3">{proj.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {proj.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
-                  ))}
+      {/* Featured Experiences with Reveal */}
+      <RevealOnScroll>
+        <section className="section-container py-16 bg-muted">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Recent Experience</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              I've worked on a variety of roles, from data analysis to teaching. Here are a few of my recent experiences.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {featuredExperiences.map((exp) => (
+              <Card
+                key={exp.id}
+                className="border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card"
+              >
+                <div className="relative w-full h-64 bg-muted">
+                  <Image src={exp.image} alt={exp.title} fill className="object-cover" />
                 </div>
-                {proj.liveUrl && (
-                  <Link href={proj.liveUrl} target="_blank" className="block">
-                    <Button className="w-full bg-gray-900 hover:bg-gray-800">View Live</Button>
-                  </Link>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+                <CardHeader>
+                  <CardTitle className="text-xl text-foreground">{exp.title}</CardTitle>
+                  <p className="text-sm font-semibold text-muted-foreground">{exp.company}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
+                  <CardDescription className="mt-3 line-clamp-3">{exp.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.tags.map((tag) => (
+                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/projects" className="inline-flex items-center text-lg font-semibold hover:opacity-70 transition-opacity">
+              More experience
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </section>
+      </RevealOnScroll>
 
-      {/* CTA Section */}
-      <section className="section-container py-16">
-        <div className="bg-gradient-to-br from-foreground to-foreground/80 rounded-3xl p-12 md:p-16 text-center text-background">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Need help building something?</h2>
-          <p className="text-lg md:text-xl text-background/80 max-w-2xl mx-auto mb-8">
-            Whether you're searching for a dedicated partner to develop your project or 
-            simply need expert support, I'm here to help.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-muted">
-              Get in Touch
-            </Button>
-          </Link>
-        </div>
-      </section>
+      {/* Featured Projects with Reveal */}
+      <RevealOnScroll>
+        <section className="section-container py-16 bg-background">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Featured Projects</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Some of my highlighted web development projects.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {featuredProjects.map((proj) => (
+              <Card
+                key={proj.id}
+                className="border border-border hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-card"
+              >
+                <div className="relative w-full h-64 bg-muted">
+                  <Image src={proj.image} alt={proj.title} fill className="object-cover" />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl text-foreground">{proj.title}</CardTitle>
+                  <p className="text-sm font-semibold text-muted-foreground">{proj.company}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{proj.period}</p>
+                  <CardDescription className="mt-3 line-clamp-3">{proj.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {proj.tags.map((tag) => (
+                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                    ))}
+                  </div>
+                  {proj.liveUrl && (
+                    <Link href={proj.liveUrl} target="_blank" className="block">
+                      <Button className="w-full">View Live</Button>
+                    </Link>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </RevealOnScroll>
+
+      {/* CTA Section with Reveal */}
+      <RevealOnScroll>
+        <section className="section-container py-16">
+          <div className="bg-gradient-to-br from-foreground to-foreground/80 rounded-3xl p-12 md:p-16 text-center text-background">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Need help building something?</h2>
+            <p className="text-lg md:text-xl text-background/80 max-w-2xl mx-auto mb-8">
+              Whether you're searching for a dedicated partner to develop your project or 
+              simply need expert support, I'm here to help.
+            </p>
+            <Link href="/contact">
+              <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-muted">
+                Get in Touch
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </RevealOnScroll>
     </div>
   );
 }

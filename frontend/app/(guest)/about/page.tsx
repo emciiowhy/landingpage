@@ -84,7 +84,7 @@ export default function AboutPage() {
                   <p>
                     I started honing my skills in web development while balancing both work and studies — developing a
                     strong foundation in <span className="font-semibold">front-end and back-end technologies</span> such as
-                    React, Next.js, PHP, and MySQL. Over time, I’ve learned how to create user-focused systems that are not
+                    React, Next.js, PHP, MySQL and PostgreSQL. Over time, I’ve learned how to create user-focused systems that are not
                     only functional but also scalable and visually appealing.
                   </p>
                   <p>
