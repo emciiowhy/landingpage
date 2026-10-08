@@ -1,0 +1,607 @@
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e2]:
+    - generic [ref=f13e4]:
+      - generic [ref=f13e5]: First-time buyer — 20% off your first 3 months.
+      - link "See pricing" [ref=f13e8] [cursor=pointer]:
+        - /url: "#pricing"
+    - button "Dismiss announcement" [ref=f13e11]
+  - banner [ref=f13e14]:
+    - generic [ref=f13e15]:
+      - link "VendoPOS — home" [ref=f13e16] [cursor=pointer]:
+        - /url: /
+        - img "VendoPOS" [ref=f13e17]
+        - generic [aria-hidden] [ref=f13e18]: VendoPOS
+      - navigation [ref=f13e19]:
+        - button "Industry" [ref=f13e22]
+        - button "Products" [ref=f13e27]
+        - button "Hardware" [ref=f13e32]
+        - generic [ref=f13e35]:
+          - link "Pricing" [ref=f13e36] [cursor=pointer]:
+            - /url: /#pricing
+          - button "Resources" [ref=f13e38]
+        - button "Company" [ref=f13e43]
+      - generic [ref=f13e46]:
+        - link "Sign in" [ref=f13e47] [cursor=pointer]:
+          - /url: /login
+        - link "Request a Demo" [ref=f13e48] [cursor=pointer]:
+          - /url: /#demo
+  - main [ref=f13e49]:
+    - generic [ref=f13e54]:
+      - generic [ref=f13e55]:
+        - generic [ref=f13e56]: POS + ERP · 7 tools, one login
+        - heading "One platform to run your whole business." [level=1] [ref=f13e57]
+        - paragraph [ref=f13e58]: VendoPOS brings your sales, stock, suppliers, finances, and staff into a single system — designed for how Filipino coffee shops, restaurants, and retailers actually operate.
+        - generic [ref=f13e59]:
+          - link "Request a Demo" [ref=f13e60] [cursor=pointer]:
+            - /url: "#demo"
+          - link "Explore the 7 Core Tools" [ref=f13e63] [cursor=pointer]:
+            - /url: "#tools"
+        - list [ref=f13e64]:
+          - listitem [ref=f13e65]: BIR-ready receipts
+          - listitem [ref=f13e67]: GCash · Maya · QRPH
+          - listitem [ref=f13e69]: Senior / PWD discounts
+          - listitem [ref=f13e71]: Peso-first
+      - generic [ref=f13e74]:
+        - generic [ref=f13e75]:
+          - generic [ref=f13e76]: VendoPOS · Point of Sale
+          - generic [ref=f13e81]:
+            - generic [ref=f13e82]:
+              - generic [ref=f13e83]:
+                - img "Kapeng Barako" [ref=f13e85]
+                - generic [ref=f13e86]: Kapeng Barako
+                - generic [ref=f13e87]: ₱120
+              - generic [ref=f13e91]:
+                - img "Milk Tea" [ref=f13e93]
+                - generic [ref=f13e94]: Milk Tea
+                - generic [ref=f13e95]: ₱140
+              - generic [ref=f13e99]:
+                - img "Ensaymada" [ref=f13e101]
+                - generic [ref=f13e102]: Ensaymada
+                - generic [ref=f13e103]: ₱85
+              - generic [ref=f13e107]:
+                - img "Ube Cake" [ref=f13e109]
+                - generic [ref=f13e110]: Ube Cake
+                - generic [ref=f13e111]: ₱160
+            - generic [ref=f13e115]:
+              - generic [ref=f13e116]:
+                - generic [ref=f13e117]: Current order
+                - generic [ref=f13e118]: Paid
+              - generic [ref=f13e121]:
+                - generic [ref=f13e899]:
+                  - generic [ref=f13e900]: Kapeng Barako ×2
+                  - generic [ref=f13e901]: ₱240
+                - generic:
+                  - generic: Ensaymada ×1
+                  - generic: ₱85
+                - generic:
+                  - generic: Milk Tea ×1
+                  - generic: ₱140
+              - generic [ref=f13e122]:
+                - generic [ref=f13e123]:
+                  - generic [ref=f13e124]: Total
+                  - generic [ref=f13e125]: ₱16
+                - generic [ref=f13e126]:
+                  - generic [ref=f13e127]: GCash
+                  - generic [ref=f13e128]: Maya
+                  - generic [ref=f13e129]: QRPH
+                  - generic [ref=f13e130]: Cash
+        - generic [ref=f13e135]:
+          - generic [ref=f13e136]: Sales today
+          - generic [ref=f13e137]:
+            - generic [ref=f13e138]: ₱12,480
+            - generic [ref=f13e139]: ▲ 18%
+    - generic [ref=f13e141]:
+      - generic [ref=f13e142]: BIR-ready receipts & reports
+      - generic [ref=f13e145]: Senior & PWD discounts
+      - generic [ref=f13e148]: GCash · Maya · QRPH
+      - generic [ref=f13e151]: Isolated per-business data
+      - generic [ref=f13e154]:
+        - generic [ref=f13e155]: ₱
+        - text: Peso-first, end to end
+    - generic [ref=f13e156]:
+      - paragraph [ref=f13e157]: Trusted by coffee bars, bakeries & pastry cafés
+      - generic [aria-hidden] [ref=f13e162]:
+        - generic [ref=f13e163]:
+          - generic [ref=f13e165]:
+            - generic [ref=f13e166]: Mc
+            - generic [ref=f13e167]: McoyProd Eats
+          - generic [ref=f13e169]:
+            - generic [ref=f13e170]: LC
+            - generic [ref=f13e171]: Local Coffee Co.
+          - generic [ref=f13e173]:
+            - generic [ref=f13e174]: TM
+            - generic [ref=f13e175]: TeaModern Pastries
+          - generic [ref=f13e177]:
+            - generic [ref=f13e178]: CC
+            - generic [ref=f13e179]: CHEEZY CAFE
+          - generic [ref=f13e181]:
+            - generic [ref=f13e182]: BB
+            - generic [ref=f13e183]: Brew & Bloom
+          - generic [ref=f13e185]:
+            - generic [ref=f13e186]: A
+            - generic [ref=f13e187]: asdasd
+          - generic [ref=f13e189]:
+            - generic [ref=f13e190]: S
+            - generic [ref=f13e191]: SnapServe
+          - generic [ref=f13e192]: Kapehanan
+          - generic [ref=f13e197]:
+            - generic [ref=f13e198]: B
+            - generic [ref=f13e199]: Buggeran
+          - generic [ref=f13e201]:
+            - generic [ref=f13e202]: K
+            - generic [ref=f13e203]: Kumpiyaan
+          - generic [ref=f13e205]:
+            - generic [ref=f13e206]: SR
+            - generic [ref=f13e207]: Siomai Rice
+          - generic [ref=f13e209]:
+            - generic [ref=f13e210]: GS
+            - generic [ref=f13e211]: Grabar Sweet
+          - generic [ref=f13e212]: Cc Auto Shop
+          - generic [ref=f13e216]: Mc Coffee
+        - generic [ref=f13e220]:
+          - generic [ref=f13e222]:
+            - generic [ref=f13e223]: Mc
+            - generic [ref=f13e224]: McoyProd Eats
+          - generic [ref=f13e226]:
+            - generic [ref=f13e227]: LC
+            - generic [ref=f13e228]: Local Coffee Co.
+          - generic [ref=f13e230]:
+            - generic [ref=f13e231]: TM
+            - generic [ref=f13e232]: TeaModern Pastries
+          - generic [ref=f13e234]:
+            - generic [ref=f13e235]: CC
+            - generic [ref=f13e236]: CHEEZY CAFE
+          - generic [ref=f13e238]:
+            - generic [ref=f13e239]: BB
+            - generic [ref=f13e240]: Brew & Bloom
+          - generic [ref=f13e242]:
+            - generic [ref=f13e243]: A
+            - generic [ref=f13e244]: asdasd
+          - generic [ref=f13e246]:
+            - generic [ref=f13e247]: S
+            - generic [ref=f13e248]: SnapServe
+          - generic [ref=f13e249]: Kapehanan
+          - generic [ref=f13e254]:
+            - generic [ref=f13e255]: B
+            - generic [ref=f13e256]: Buggeran
+          - generic [ref=f13e258]:
+            - generic [ref=f13e259]: K
+            - generic [ref=f13e260]: Kumpiyaan
+          - generic [ref=f13e262]:
+            - generic [ref=f13e263]: SR
+            - generic [ref=f13e264]: Siomai Rice
+          - generic [ref=f13e266]:
+            - generic [ref=f13e267]: GS
+            - generic [ref=f13e268]: Grabar Sweet
+          - generic [ref=f13e269]: Cc Auto Shop
+          - generic [ref=f13e273]: Mc Coffee
+    - generic [ref=f13e278]:
+      - generic [ref=f13e279]:
+        - text: The problem
+        - heading "Your business runs on spreadsheets and a dozen disconnected apps." [level=2] [ref=f13e280]
+        - paragraph [ref=f13e281]: Sales here, stock there, suppliers in a chat thread, payroll in another sheet. Nothing talks to each other — and none of it was built for the way you actually operate in the Philippines.
+      - generic [ref=f13e282]:
+        - generic [ref=f13e283]:
+          - generic [ref=f13e284]: Today
+          - list [ref=f13e287]:
+            - listitem [ref=f13e288]:
+              - generic [ref=f13e289]: —
+              - text: Five or more tools, none of them connected.
+            - listitem [ref=f13e290]:
+              - generic [ref=f13e291]: —
+              - text: Tax season means rebuilding BIR reports by hand.
+            - listitem [ref=f13e292]:
+              - generic [ref=f13e293]: —
+              - text: Senior and PWD discounts mean manual math and messy logs.
+            - listitem [ref=f13e294]:
+              - generic [ref=f13e295]: —
+              - text: Foreign POS tools price in dollars, ignore e-wallets.
+            - listitem [ref=f13e296]:
+              - generic [ref=f13e297]: —
+              - text: No single source of truth across the business.
+        - generic [ref=f13e298]:
+          - generic [ref=f13e300]: With VendoPOS
+          - list [ref=f13e303]:
+            - listitem [ref=f13e304]: One platform, seven connected tools.
+            - listitem [ref=f13e307]: BIR-ready receipts and reports out of the box.
+            - listitem [ref=f13e310]: Senior & PWD discounts applied in a tap, logged for BIR.
+            - listitem [ref=f13e313]: Peso-first with GCash, Maya, and QRPH built in.
+            - listitem [ref=f13e316]: Everything in one place — one source of truth.
+    - generic [ref=f13e320]:
+      - generic [ref=f13e321]:
+        - text: One platform, seven core tools
+        - heading "Everything your business does, in one place." [level=2] [ref=f13e322]
+        - paragraph [ref=f13e323]: Each tool owns exactly one job. Turn on what you need today; add the rest as you grow — without ever switching systems.
+      - generic [ref=f13e324]:
+        - article [ref=f13e325]:
+          - generic [ref=f13e327]:
+            - heading "One login. One source of truth." [level=3] [ref=f13e331]: One login.One source of truth.
+            - paragraph [ref=f13e332]: Every tool shares the same data, so a sale at the POS updates inventory, feeds your finances, and rewards loyalty — automatically.
+          - generic [ref=f13e333]: Fully isolated per business
+        - article [ref=f13e335]:
+          - heading "Point of Sale" [level=3] [ref=f13e339]
+          - paragraph [ref=f13e340]: Ring up Customers and take payment — the fast front-of-house sales surface.
+        - article [ref=f13e341]:
+          - heading "Inventory" [level=3] [ref=f13e345]
+          - paragraph [ref=f13e346]: Know exactly how much stock you have and where it sits, in real time.
+        - article [ref=f13e347]:
+          - heading "Procurement & Supply Chain" [level=3] [ref=f13e351]
+          - paragraph [ref=f13e352]: Suppliers, purchase orders, and receiving — manage how goods arrive.
+        - article [ref=f13e353]:
+          - heading "Manufacturing" [level=3] [ref=f13e357]
+          - paragraph [ref=f13e358]: Build products from raw materials with recipes and bill-of-materials.
+        - article [ref=f13e359]:
+          - heading "Finance & Accounting" [level=3] [ref=f13e363]
+          - paragraph [ref=f13e364]: Money in and out — sales reports, expenses, tax, and profit & loss.
+        - article [ref=f13e365]:
+          - heading "Human Resources" [level=3] [ref=f13e369]
+          - paragraph [ref=f13e370]: Employees, shifts, and payroll for your own staff.
+        - article [ref=f13e371]:
+          - heading "Customer Relationship" [level=3] [ref=f13e375]
+          - paragraph [ref=f13e376]: Track your Customers and grow loyalty over time.
+    - generic [ref=f13e378]:
+      - generic [ref=f13e379]:
+        - text: Built for the Philippines
+        - heading "The advantages global POS tools ignore." [level=2] [ref=f13e380]
+        - paragraph [ref=f13e381]: Square and Lightspeed weren’t built for here. VendoPOS is — down to the receipt, the payment, and the peso.
+      - generic [ref=f13e382]:
+        - generic [ref=f13e387]:
+          - heading "BIR-ready receipts & reports" [level=3] [ref=f13e388]
+          - paragraph [ref=f13e389]: Issue compliant receipts and generate the reports you need at tax time — no manual rebuilding, no spreadsheet gymnastics.
+          - generic [ref=f13e390]:
+            - generic [ref=f13e391]: Compliance
+            - generic [ref=f13e392]: Sales reports
+        - generic [ref=f13e397]:
+          - heading "GCash, Maya & QRPH" [level=3] [ref=f13e398]
+          - paragraph [ref=f13e399]: Accept the payments your Customers actually use. Cash, e-wallets, and QR — all rung up the same simple way.
+          - generic [ref=f13e400]:
+            - generic [ref=f13e401]: GCash
+            - generic [ref=f13e402]: Maya
+            - generic [ref=f13e403]: QRPH
+        - generic [ref=f13e408]:
+          - heading "Senior & PWD discounts, built in" [level=3] [ref=f13e409]
+          - paragraph [ref=f13e410]: Apply the mandated 20% Senior Citizen and PWD discounts in a tap — logged correctly for your BIR reporting, with no manual math at the counter.
+          - generic [ref=f13e411]:
+            - generic [ref=f13e412]: Senior 20%
+            - generic [ref=f13e413]: PWD
+            - generic [ref=f13e414]: BIR-logged
+        - generic [ref=f13e415]:
+          - generic [ref=f13e416]: ₱
+          - generic [ref=f13e418]:
+            - heading "Peso-first, end to end" [level=3] [ref=f13e419]
+            - paragraph [ref=f13e420]: Every price, report, and total is in Philippine peso. No currency confusion, no conversion guesswork — just your money, your way.
+            - generic [ref=f13e421]:
+              - generic [ref=f13e422]: ₱ everywhere
+              - generic [ref=f13e423]: Local-first
+    - generic [ref=f13e425]:
+      - generic [ref=f13e426]:
+        - text: How we compare
+        - heading "Built for here — not adapted for here." [level=2] [ref=f13e427]
+        - paragraph [ref=f13e428]: The things Philippine operators need on day one, set against the global tools they’re usually told to settle for.
+      - table [ref=f13e430]:
+        - caption [ref=f13e431]: Feature comparison of VendoPOS, Square, and Lightspeed for Philippine businesses.
+        - rowgroup [ref=f13e432]:
+          - row [ref=f13e433]:
+            - columnheader "Feature" [ref=f13e434]
+            - columnheader "VendoPOS" [ref=f13e435]
+            - columnheader "Square" [ref=f13e436]
+            - columnheader "Lightspeed" [ref=f13e437]
+        - rowgroup [ref=f13e438]:
+          - row [ref=f13e439]:
+            - rowheader "BIR-ready receipts & reports" [ref=f13e440]
+            - cell "Yes" [ref=f13e441]
+            - cell "No" [ref=f13e446]:
+              - generic [ref=f13e447]:
+                - generic [aria-hidden] [ref=f13e448]: –
+                - generic [ref=f13e449]: "No"
+            - cell "No" [ref=f13e450]:
+              - generic [ref=f13e451]:
+                - generic [aria-hidden] [ref=f13e452]: –
+                - generic [ref=f13e453]: "No"
+          - row [ref=f13e454]:
+            - rowheader "GCash · Maya · QRPH built in" [ref=f13e455]
+            - cell "Yes" [ref=f13e456]
+            - cell "No" [ref=f13e461]:
+              - generic [ref=f13e462]:
+                - generic [aria-hidden] [ref=f13e463]: –
+                - generic [ref=f13e464]: "No"
+            - cell "Partial" [ref=f13e465]:
+              - generic [ref=f13e466]:
+                - generic [aria-hidden] [ref=f13e467]: ~
+                - generic [ref=f13e468]: Partial
+          - row [ref=f13e469]:
+            - rowheader "Senior / PWD discounts built in" [ref=f13e470]
+            - cell "Yes" [ref=f13e471]
+            - cell "No" [ref=f13e476]:
+              - generic [ref=f13e477]:
+                - generic [aria-hidden] [ref=f13e478]: –
+                - generic [ref=f13e479]: "No"
+            - cell "No" [ref=f13e480]:
+              - generic [ref=f13e481]:
+                - generic [aria-hidden] [ref=f13e482]: –
+                - generic [ref=f13e483]: "No"
+          - row [ref=f13e484]:
+            - rowheader "Peso-first, end to end" [ref=f13e485]
+            - cell "Yes" [ref=f13e486]
+            - cell "No" [ref=f13e491]:
+              - generic [ref=f13e492]:
+                - generic [aria-hidden] [ref=f13e493]: –
+                - generic [ref=f13e494]: "No"
+            - cell "No" [ref=f13e495]:
+              - generic [ref=f13e496]:
+                - generic [aria-hidden] [ref=f13e497]: –
+                - generic [ref=f13e498]: "No"
+          - row [ref=f13e499]:
+            - rowheader "Per-tenant data isolation" [ref=f13e500]
+            - cell "Yes" [ref=f13e501]
+            - cell "Partial" [ref=f13e506]:
+              - generic [ref=f13e507]:
+                - generic [aria-hidden] [ref=f13e508]: ~
+                - generic [ref=f13e509]: Partial
+            - cell "Partial" [ref=f13e510]:
+              - generic [ref=f13e511]:
+                - generic [aria-hidden] [ref=f13e512]: ~
+                - generic [ref=f13e513]: Partial
+          - row [ref=f13e514]:
+            - rowheader "Local PH onboarding & support" [ref=f13e515]
+            - cell "Yes" [ref=f13e516]
+            - cell "No" [ref=f13e521]:
+              - generic [ref=f13e522]:
+                - generic [aria-hidden] [ref=f13e523]: –
+                - generic [ref=f13e524]: "No"
+            - cell "No" [ref=f13e525]:
+              - generic [ref=f13e526]:
+                - generic [aria-hidden] [ref=f13e527]: –
+                - generic [ref=f13e528]: "No"
+    - generic [ref=f13e530]:
+      - generic [ref=f13e531]:
+        - text: Loved behind the espresso bar
+        - heading "Brewed fast. Counted to the centavo." [level=2] [ref=f13e532]
+        - paragraph [ref=f13e533]: From neighbourhood coffee bars to bakeries and pastry cafés — here's what local food & beverage operators say after switching their counters to VendoPOS.
+        - generic [ref=f13e534]:
+          - generic [ref=f13e535]:
+            - generic "5 out of 5" [ref=f13e536]
+            - text: 5.0 from local operators
+          - generic [aria-hidden] [ref=f13e547]: ·
+          - generic [ref=f13e548]: BIR-ready receipts
+          - generic [aria-hidden] [ref=f13e549]: ·
+          - generic [ref=f13e550]: Senior & PWD discounts
+          - generic [aria-hidden] [ref=f13e551]: ·
+          - generic [ref=f13e552]: GCash · Maya · QRPH
+      - generic [ref=f13e553]:
+        - generic [ref=f13e554]:
+          - figure "Patricia Gomez Patricia Gomez Owner · Bean & Barrel Coffee, Pasig City" [ref=f13e555]:
+            - generic "5 out of 5 stars" [ref=f13e556]
+            - blockquote [ref=f13e567]: “Three shift changes a day and the drawer never used to match. Now each barista opens and closes their own float, and it balances to the centavo — I check the variance from my phone before I even reach the shop.”
+            - generic [ref=f13e568]: Drawers balance to the centavo
+            - generic [ref=f13e572]:
+              - img "Patricia Gomez" [ref=f13e573]
+              - generic [ref=f13e574]:
+                - generic [ref=f13e575]: Patricia Gomez
+                - generic [ref=f13e576]: Owner · Bean & Barrel Coffee, Pasig City
+          - figure "Nico Alvarez Nico Alvarez Store Manager · Crust & Crema Bakehouse, Makati City" [ref=f13e577]:
+            - generic "5 out of 5 stars" [ref=f13e578]
+            - blockquote [ref=f13e589]: “Weekend rush is brutal. The 4-digit PIN lets my crew hand off the till in seconds, and Senior and PWD discounts apply without anyone doing math on paper. Shorter lines, fewer mistakes.”
+            - generic [ref=f13e590]: 2-second PIN switching
+            - generic [ref=f13e594]:
+              - img "Nico Alvarez" [ref=f13e595]
+              - generic [ref=f13e596]:
+                - generic [ref=f13e597]: Nico Alvarez
+                - generic [ref=f13e598]: Store Manager · Crust & Crema Bakehouse, Makati City
+          - figure "Aira Santos Aira Santos Owner · Tsaa & Co. Milk Tea, Cebu City" [ref=f13e599]:
+            - generic "5 out of 5 stars" [ref=f13e600]
+            - blockquote [ref=f13e611]: “Regulars earn points on every cup now, and at month-end I can finally see which drinks actually make money — not just what sold. At closing the Z-reading and BIR receipts are already sorted, so I've stopped staying late to reconcile by hand.”
+            - generic [ref=f13e612]: Loyalty points + real margins
+            - generic [ref=f13e616]:
+              - img "Aira Santos" [ref=f13e617]
+              - generic [ref=f13e618]:
+                - generic [ref=f13e619]: Aira Santos
+                - generic [ref=f13e620]: Owner · Tsaa & Co. Milk Tea, Cebu City
+          - figure "Divine Ocampo Divine Ocampo Owner · Lola's Lutong Bahay, Davao City" [ref=f13e621]:
+            - generic "5 out of 5 stars" [ref=f13e622]
+            - blockquote [ref=f13e633]: “We used to run out of best-sellers in the middle of service without noticing. Now VendoPOS flags low stock before it's gone and I reorder from the same screen — far fewer 'sold out, sorry po' moments.”
+            - generic [ref=f13e634]: Low-stock alerts before you run out
+            - generic [ref=f13e638]:
+              - img "Divine Ocampo" [ref=f13e639]
+              - generic [ref=f13e640]:
+                - generic [ref=f13e641]: Divine Ocampo
+                - generic [ref=f13e642]: Owner · Lola's Lutong Bahay, Davao City
+          - figure "Ramon Teng Ramon Teng Owner · Kopi Express (3 branches), Iloilo City" [ref=f13e643]:
+            - generic "5 out of 5 stars" [ref=f13e644]
+            - blockquote [ref=f13e655]: “Running three branches used to mean three separate notebooks. Now every sale rolls into one dashboard — I can see which branch is up or down for the day without calling a single manager.”
+            - generic [ref=f13e656]: All branches, one dashboard
+            - generic [ref=f13e660]:
+              - img "Ramon Teng" [ref=f13e661]
+              - generic [ref=f13e662]:
+                - generic [ref=f13e663]: Ramon Teng
+                - generic [ref=f13e664]: Owner · Kopi Express (3 branches), Iloilo City
+        - generic [ref=f13e665]:
+          - button "Show testimonial 1" [ref=f13e666]
+          - button "Show testimonial 2" [ref=f13e667]
+          - button "Show testimonial 3" [ref=f13e668]
+          - button "Show testimonial 4" [ref=f13e669]
+          - button "Show testimonial 5" [ref=f13e670]
+    - generic [ref=f13e673]:
+      - generic [ref=f13e674]:
+        - text: Hands-on onboarding
+        - heading "How it works" [level=2] [ref=f13e675]
+        - paragraph [ref=f13e676]: No complicated self-setup. We onboard you personally, so you’re running on day one.
+      - generic [ref=f13e677]:
+        - generic [ref=f13e678]:
+          - text: STEP 01
+          - heading "Request a demo" [level=3] [ref=f13e679]
+          - paragraph [ref=f13e680]: Tell us about your business. We’ll show you exactly how VendoPOS fits your shop, restaurant, or store.
+        - generic [ref=f13e681]:
+          - text: STEP 02
+          - heading "We set you up" [level=3] [ref=f13e682]
+          - paragraph [ref=f13e683]: Our team configures your isolated workspace, loads your products, and trains your staff — hands-on, no guesswork.
+        - generic [ref=f13e684]:
+          - text: STEP 03
+          - heading "Run your business" [level=3] [ref=f13e685]
+          - paragraph [ref=f13e686]: Start ringing up sales, tracking stock, and seeing your numbers — all from one system, from day one.
+    - generic [ref=f13e688]:
+      - generic [ref=f13e689]:
+        - text: Plans
+        - heading "Pick the bundle that fits where you are." [level=2] [ref=f13e690]
+        - paragraph [ref=f13e691]: Every plan differs by which tools are unlocked. Start small, upgrade as you grow — same platform, no migration.
+      - generic [ref=f13e692]:
+        - generic [ref=f13e693]:
+          - heading "Starter" [level=3] [ref=f13e694]
+          - paragraph [ref=f13e695]: For single-location coffee shops & small retailers.
+          - generic [ref=f13e696]:
+            - generic [ref=f13e697]: ₱299
+            - generic [ref=f13e698]: /mo
+          - generic [ref=f13e699]: "First-time Buyer: 20% OFF your first 3 months"
+          - list [ref=f13e703]:
+            - listitem [ref=f13e704]: Point of Sale
+            - listitem [ref=f13e707]: Inventory
+            - listitem [ref=f13e710]: BIR-ready receipts
+            - listitem [ref=f13e713]: GCash / Maya / QRPH
+            - listitem [ref=f13e716]: Senior / PWD discounts
+          - link "Start Free Trial" [ref=f13e719] [cursor=pointer]:
+            - /url: /signup?plan=starter
+        - generic [ref=f13e722]:
+          - generic [ref=f13e723]: Most popular
+          - heading "Business" [level=3] [ref=f13e724]
+          - paragraph [ref=f13e725]: For growing multi-staff retailers & restaurants.
+          - generic [ref=f13e726]:
+            - generic [ref=f13e727]: ₱499
+            - generic [ref=f13e728]: /mo
+          - generic [ref=f13e729]: "First-time Buyer: 20% OFF your first 3 months"
+          - list [ref=f13e733]:
+            - listitem [ref=f13e734]: Everything in Starter
+            - listitem [ref=f13e737]: Procurement & Supply Chain
+            - listitem [ref=f13e740]: Customer Relationship (CRM)
+            - listitem [ref=f13e743]: Finance & Accounting
+            - listitem [ref=f13e746]: Multi-staff roles
+            - listitem [ref=f13e749]: Custom Branding
+          - link "Start Free Trial" [ref=f13e752] [cursor=pointer]:
+            - /url: /signup?plan=business
+        - generic [ref=f13e755]:
+          - heading "Enterprise" [level=3] [ref=f13e756]
+          - paragraph [ref=f13e757]: For large, complex, multi-location operations.
+          - generic [ref=f13e758]:
+            - generic [ref=f13e759]: ₱799
+            - generic [ref=f13e760]: /mo
+          - list [ref=f13e761]:
+            - listitem [ref=f13e762]: Everything in Business
+            - listitem [ref=f13e765]: Manufacturing (recipes / BOM)
+            - listitem [ref=f13e768]: Human Resources & payroll
+            - listitem [ref=f13e771]: Multi-location
+            - listitem [ref=f13e774]: Priority support
+          - link "Talk to our team" [ref=f13e777] [cursor=pointer]:
+            - /url: /enterprise
+      - paragraph [ref=f13e780]: Prices shown in Philippine peso (₱), billed monthly. Starter & Business include a 14-day free trial — no card required. Enterprise starts with a demo.
+    - generic [ref=f13e782]:
+      - generic [ref=f13e783]:
+        - text: Answers
+        - heading "Frequently asked questions" [level=2] [ref=f13e784]
+      - generic [ref=f13e785]:
+        - group [ref=f13e786]:
+          - generic [ref=f13e787] [cursor=pointer]
+          - paragraph [ref=f13e791]: Yes. Each business runs on its own isolated workspace. Your sales, stock, customers, and finances are fully separated from every other business on the platform — no one else can see your data, and you can’t see theirs.
+        - group [ref=f13e792]:
+          - generic [ref=f13e793] [cursor=pointer]
+        - group [ref=f13e797]:
+          - generic [ref=f13e798] [cursor=pointer]
+        - group [ref=f13e802]:
+          - generic [ref=f13e803] [cursor=pointer]
+        - group [ref=f13e807]:
+          - generic [ref=f13e808] [cursor=pointer]
+        - group [ref=f13e812]:
+          - generic [ref=f13e813] [cursor=pointer]
+    - generic [ref=f13e820]:
+      - generic [ref=f13e821]:
+        - heading "Request a demo" [level=2] [ref=f13e822]
+        - paragraph [ref=f13e823]: Tell us about your business. We’ll reach out to set you up — no signup, no checkout, just a conversation.
+      - generic [ref=f13e824]:
+        - generic [ref=f13e825]:
+          - generic [ref=f13e826]: Your name *
+          - textbox "Your name *" [ref=f13e827]:
+            - /placeholder: Juan dela Cruz
+        - generic [ref=f13e829]:
+          - generic [ref=f13e830]: Business name *
+          - textbox "Business name *" [ref=f13e831]:
+            - /placeholder: Kape ni Juan
+        - generic [ref=f13e833]:
+          - generic [ref=f13e834]: Email *
+          - textbox "Email *" [ref=f13e835]:
+            - /placeholder: you@business.ph
+        - generic [ref=f13e837]:
+          - generic [ref=f13e838]: Phone *
+          - textbox "Phone *" [ref=f13e839]:
+            - /placeholder: 0917 123 4567
+        - generic [ref=f13e841]:
+          - generic [ref=f13e842]: Business type *
+          - combobox "Business type *" [ref=f13e843]:
+            - option "Select your business type…" [selected]
+            - option "Coffee shop / Café"
+            - option "Restaurant / Food service"
+            - option "Retail store (small)"
+            - option "Retail store (medium–large)"
+            - option "Manufacturing / Production"
+            - option "Other"
+        - generic [ref=f13e845]:
+          - generic [ref=f13e846]: Message (optional)
+          - textbox "Message (optional)" [ref=f13e847]:
+            - /placeholder: Tell us anything that would help us prepare for your demo…
+        - generic [ref=f13e848]:
+          - generic [ref=f13e849]: Create your password (optional)
+          - textbox "Create your password (optional)" [ref=f13e850]:
+            - /placeholder: At least 8 characters
+          - generic [ref=f13e851]: Set one now and you can sign in the moment we approve your store — no waiting for a password from us. You can also skip this and set it later.
+        - generic [ref=f13e852]:
+          - button "Request my demo" [ref=f13e853]
+          - paragraph [ref=f13e856]: We’ll only use your details to contact you about VendoPOS. Your data stays private.
+  - contentinfo [ref=f13e857]:
+    - generic [ref=f13e858]:
+      - generic [ref=f13e859]:
+        - generic [ref=f13e860]:
+          - generic [ref=f13e861]:
+            - img "VendoPOS" [ref=f13e862]
+            - generic [aria-hidden] [ref=f13e863]: VendoPOS
+          - paragraph [ref=f13e864]: One multi-tenant POS + ERP platform built for how Filipino businesses actually operate.
+        - generic [ref=f13e865]:
+          - heading "Product" [level=4] [ref=f13e866]
+          - list [ref=f13e867]:
+            - listitem [ref=f13e868]:
+              - link "Core Tools" [ref=f13e869] [cursor=pointer]:
+                - /url: /#tools
+            - listitem [ref=f13e870]:
+              - link "Why VendoPOS" [ref=f13e871] [cursor=pointer]:
+                - /url: /#why
+            - listitem [ref=f13e872]:
+              - link "Pricing" [ref=f13e873] [cursor=pointer]:
+                - /url: /#pricing
+            - listitem [ref=f13e874]:
+              - link "How it works" [ref=f13e875] [cursor=pointer]:
+                - /url: /#how
+        - generic [ref=f13e876]:
+          - heading "Company" [level=4] [ref=f13e877]
+          - list [ref=f13e878]:
+            - listitem [ref=f13e879]:
+              - link "About Us" [ref=f13e880] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f13e881]:
+              - link "Careers" [ref=f13e882] [cursor=pointer]:
+                - /url: /careers
+            - listitem [ref=f13e883]:
+              - link "Contact" [ref=f13e884] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f13e885]:
+              - link "Request a Demo" [ref=f13e886] [cursor=pointer]:
+                - /url: /#demo
+        - generic [ref=f13e887]:
+          - heading "Legal" [level=4] [ref=f13e888]
+          - list [ref=f13e889]:
+            - listitem [ref=f13e890]:
+              - link "Privacy Policy" [ref=f13e891] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=f13e892]:
+              - link "Terms of Service" [ref=f13e893] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=f13e894]:
+              - link "Data & Security" [ref=f13e895] [cursor=pointer]:
+                - /url: /security
+      - generic [ref=f13e896]: © 2026 VendoPOS. All rights reserved.
+  - alert [ref=f13e898]

@@ -1,0 +1,130 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - link "+63 915 515 2314" [ref=e8] [cursor=pointer]:
+            - /url: tel:+639155152314
+          - link "info@carshey.ph" [ref=e12] [cursor=pointer]:
+            - /url: mailto:info@carshey.ph
+        - generic [ref=e17]: Same-Day Process • Immediate Release
+      - navigation [ref=e18]:
+        - link "Carshey Philippines" [ref=e19] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e21]:
+            - generic [ref=e22]: Carshey
+            - generic [ref=e23]: Philippines
+        - button [ref=e24]
+    - main [ref=e26]:
+      - main [ref=e27]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - heading "Find Your Dream Car Today" [level=1] [ref=e33]
+            - paragraph [ref=e34]: Explore quality vehicles with easy rent-to-own plans. Quick approval and same-day release.
+            - generic [ref=e35]:
+              - link "Browse Vehicles" [ref=e38] [cursor=pointer]:
+                - /url: /vehicles
+              - link "Sell Your Car" [ref=e41] [cursor=pointer]:
+                - /url: /sell-car
+          - img "Hero Car" [ref=e43]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - img "BMW" [ref=e49]
+            - generic [ref=e50]: BMW
+          - generic [ref=e51]:
+            - img "Chevrolet" [ref=e52]
+            - generic [ref=e53]: Chevrolet
+          - generic [ref=e54]:
+            - img "Jaguar" [ref=e55]
+            - generic [ref=e56]: Jaguar
+          - generic [ref=e57]:
+            - img "Hyundai" [ref=e58]
+            - generic [ref=e59]: Hyundai
+          - generic [ref=e60]:
+            - img "Suzuki" [ref=e61]
+            - generic [ref=e62]: Suzuki
+          - generic [ref=e63]:
+            - img "Lexus" [ref=e64]
+            - generic [ref=e65]: Lexus
+        - generic [ref=e69]:
+          - heading "Featured Units" [level=2] [ref=e70]
+          - link "View All Vehicles" [ref=e72] [cursor=pointer]:
+            - /url: /vehicles
+        - generic [ref=e82]:
+          - heading "Why Choose Carshey?" [level=2] [ref=e83]
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - heading "No Bank Approval" [level=3] [ref=e89]
+              - paragraph [ref=e90]: Bypass traditional banking requirements
+            - generic [ref=e91]:
+              - heading "Same Day Release" [level=3] [ref=e96]
+              - paragraph [ref=e97]: Get your car within 24 hours
+            - generic [ref=e98]:
+              - heading "Flexible Payment" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Affordable monthly installments
+            - generic [ref=e104]:
+              - heading "After-Sales Support" [level=3] [ref=e111]
+              - paragraph [ref=e112]: Dedicated customer service team
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - heading "How It Works" [level=2] [ref=e117]
+            - paragraph [ref=e118]: Rent to Own in 4 Easy Steps
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - heading "Simple Requirements" [level=3] [ref=e125]
+              - paragraph [ref=e126]: 2 valid IDs, proof of income, and proof of billing
+            - generic [ref=e127]:
+              - heading "One Day Process" [level=3] [ref=e132]
+              - paragraph [ref=e133]: Fast approval without bank requirements
+            - generic [ref=e134]:
+              - heading "Choose Your Car" [level=3] [ref=e140]
+              - paragraph [ref=e141]: Select from our wide range of quality vehicles
+            - generic [ref=e142]:
+              - heading "Same Day Release" [level=3] [ref=e148]
+              - paragraph [ref=e149]: Drive home your dream car immediately
+        - generic [ref=e153]:
+          - heading "Do You Have Something To Sell?" [level=2] [ref=e154]
+          - paragraph [ref=e155]: Get the best value for your vehicle. Quick evaluation and instant offers.
+          - link "SELL YOUR CAR TODAY" [ref=e157] [cursor=pointer]:
+            - /url: /sell-car
+    - contentinfo [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - link "Carshey" [ref=e162] [cursor=pointer]:
+              - /url: /
+            - paragraph [ref=e168]: The fastest way to get your dream car. Same-day approval. Hassle-free rent-to-own.
+          - generic [ref=e169]:
+            - heading "Quick Links" [level=3] [ref=e170]
+            - list [ref=e171]:
+              - listitem [ref=e172]:
+                - link "Home" [ref=e173] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e174]:
+                - link "Vehicles" [ref=e175] [cursor=pointer]:
+                  - /url: /vehicles
+              - listitem [ref=e176]:
+                - link "Rent to Own" [ref=e177] [cursor=pointer]:
+                  - /url: /rent-to-own
+              - listitem [ref=e178]:
+                - link "Financing" [ref=e179] [cursor=pointer]:
+                  - /url: /financing
+              - listitem [ref=e180]:
+                - link "About" [ref=e181] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e182]:
+                - link "Contact" [ref=e183] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e184]:
+            - heading "Get in Touch" [level=3] [ref=e185]
+            - list [ref=e186]:
+              - listitem [ref=e187]: +63 915 515 2314
+              - listitem [ref=e190]: support@carshey.ph
+            - generic [ref=e194]:
+              - link [ref=e195] [cursor=pointer]:
+                - /url: "#"
+              - link [ref=e198] [cursor=pointer]:
+                - /url: "#"
+        - paragraph [ref=e203]: © 2026 Carshey Philippines. All rights reserved.
+  - region "Notifications alt+T"
+  - alert [ref=e204]

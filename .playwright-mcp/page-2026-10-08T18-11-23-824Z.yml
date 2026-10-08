@@ -1,0 +1,354 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e3]:
+    - banner [ref=f3e4]:
+      - img "Cover" [ref=f3e6]
+      - generic [ref=f3e9]:
+        - generic [ref=f3e10]:
+          - img "Mc Zaldy Yap" [ref=f3e12]
+          - generic [ref=f3e13]:
+            - heading "Mc Zaldy Yap 👋 Verified" [level=1] [ref=f3e14]:
+              - text: Mc Zaldy Yap
+              - generic [ref=f3e15]: 👋
+              - img "Verified" [ref=f3e16]
+            - paragraph [ref=f3e19]: Aspiring web developer building fast, responsive apps. Next.js · React · TypeScript — based in Cebu City, PH.
+            - generic [ref=f3e20]:
+              - generic [ref=f3e21]: Next.js
+              - generic [ref=f3e22]: React
+              - generic [ref=f3e23]: TypeScript
+              - generic [ref=f3e24]: Tailwind CSS
+        - generic [ref=f3e25]:
+          - generic [ref=f3e26]:
+            - link [ref=f3e27] [cursor=pointer]:
+              - /url: /resume.pdf
+              - button "Résumé" [ref=f3e28]
+            - link [ref=f3e29] [cursor=pointer]:
+              - /url: "#contact"
+              - button "Message me" [ref=f3e30]
+          - generic [ref=f3e31]:
+            - link "LinkedIn" [ref=f3e32] [cursor=pointer]:
+              - /url: https://linkedin.com/in/emciiowhy
+            - link "GitHub" [ref=f3e37] [cursor=pointer]:
+              - /url: https://github.com/emciiowhy
+            - link "Twitter" [ref=f3e41] [cursor=pointer]:
+              - /url: https://x.com/emciiowhy07
+            - link "Facebook" [ref=f3e44] [cursor=pointer]:
+              - /url: https://facebook.com/mckiieeyy1107
+    - navigation [ref=f3e47]:
+      - generic [ref=f3e48]:
+        - link "Projects" [ref=f3e49] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Experience" [ref=f3e51] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Certificates" [ref=f3e53] [cursor=pointer]:
+          - /url: "#certificates"
+    - generic [ref=f3e55]:
+      - complementary [ref=f3e57]:
+        - generic [ref=f3e58]:
+          - heading "Intro" [level=2] [ref=f3e60]
+          - list [ref=f3e62]:
+            - listitem [ref=f3e63]:
+              - generic [ref=f3e67]: From Cebu City, Philippines
+            - listitem [ref=f3e68]:
+              - link "mcmcyap07@gmail.com" [ref=f3e72] [cursor=pointer]:
+                - /url: mailto:mcmcyap07@gmail.com
+            - listitem [ref=f3e73]:
+              - link "+63 915 515 2314" [ref=f3e76] [cursor=pointer]:
+                - /url: tel:+639155152314
+            - listitem [ref=f3e77]:
+              - generic [ref=f3e81]: Philippines
+            - listitem [ref=f3e82]:
+              - generic [ref=f3e87]: Filipino, English
+        - generic [ref=f3e88]:
+          - heading "Work Experience" [level=2] [ref=f3e90]
+          - list [ref=f3e92]:
+            - listitem [ref=f3e93]:
+              - generic [ref=f3e98]:
+                - paragraph [ref=f3e99]: Data Scraper
+                - paragraph [ref=f3e100]: Lead Generation (Facebook Analytics)
+                - paragraph [ref=f3e101]: 2022 – 2025
+            - listitem [ref=f3e102]:
+              - generic [ref=f3e107]:
+                - paragraph [ref=f3e108]: Telephone Interviewer
+                - paragraph [ref=f3e109]: Dynata
+                - paragraph [ref=f3e110]: "2024"
+            - listitem [ref=f3e111]:
+              - generic [ref=f3e116]:
+                - paragraph [ref=f3e117]: ESL Teacher
+                - paragraph [ref=f3e118]: First English Global
+                - paragraph [ref=f3e119]: "2022"
+        - generic [ref=f3e120]:
+          - heading "Tech Stack" [level=2] [ref=f3e122]
+          - generic [ref=f3e124]:
+            - generic [ref=f3e125]:
+              - paragraph [ref=f3e126]: Frontend
+              - generic [ref=f3e127]:
+                - generic [ref=f3e128]: "#nextjs"
+                - generic [ref=f3e129]: "#react"
+                - generic [ref=f3e130]: "#typescript"
+                - generic [ref=f3e131]: "#tailwindcss"
+                - generic [ref=f3e132]: "#html/css"
+            - generic [ref=f3e133]:
+              - paragraph [ref=f3e134]: Backend
+              - generic [ref=f3e135]:
+                - generic [ref=f3e136]: "#nodejs"
+                - generic [ref=f3e137]: "#express"
+                - generic [ref=f3e138]: "#restapi"
+                - generic [ref=f3e139]: "#resend"
+            - generic [ref=f3e140]:
+              - paragraph [ref=f3e141]: Tools
+              - generic [ref=f3e142]:
+                - generic [ref=f3e143]: "#git"
+                - generic [ref=f3e144]: "#vercel"
+                - generic [ref=f3e145]: "#figma"
+                - generic [ref=f3e146]: "#framer-motion"
+        - generic [ref=f3e147]:
+          - heading "Education" [level=2] [ref=f3e149]
+          - generic [ref=f3e156]:
+            - paragraph [ref=f3e157]: BS in Information Technology
+            - paragraph [ref=f3e158]: Currently pursuing
+        - generic [ref=f3e159]:
+          - generic [ref=f3e160]:
+            - heading "GitHub Streak" [level=2] [ref=f3e161]
+            - link "Open GitHub profile" [ref=f3e162] [cursor=pointer]:
+              - /url: https://github.com/emciiowhy
+          - generic [ref=f3e167]:
+            - img "emciiowhy GitHub streak stats" [ref=f3e168]
+            - img "emciiowhy GitHub contribution graph" [ref=f3e169]
+        - generic [ref=f3e170]:
+          - heading "Social Links" [level=2] [ref=f3e172]
+          - list [ref=f3e174]:
+            - listitem [ref=f3e175]:
+              - link "GitHub" [ref=f3e176] [cursor=pointer]:
+                - /url: https://github.com/emciiowhy
+            - listitem [ref=f3e180]:
+              - link "LinkedIn" [ref=f3e181] [cursor=pointer]:
+                - /url: https://linkedin.com/in/emciiowhy
+            - listitem [ref=f3e186]:
+              - link "Facebook" [ref=f3e187] [cursor=pointer]:
+                - /url: https://facebook.com/mckiieeyy1107
+      - main [ref=f3e190]:
+        - generic [ref=f3e191]:
+          - generic [ref=f3e192]:
+            - generic [ref=f3e193]:
+              - heading "My Creations" [level=2] [ref=f3e194]
+              - button "Filter" [ref=f3e196] [cursor=pointer]
+            - generic [ref=f3e199]:
+              - heading "Featured" [level=3] [ref=f3e200]
+              - generic [ref=f3e201]:
+                - button "VendoPOS Latest Live preview VendoPOS POS + ERP for Philippine businesses" [ref=f3e202] [cursor=pointer]:
+                  - generic [ref=f3e203]:
+                    - img "VendoPOS" [ref=f3e204]
+                    - generic [ref=f3e206]: Latest
+                    - generic [ref=f3e207]: Live preview
+                    - generic [ref=f3e210]:
+                      - heading "VendoPOS" [level=4] [ref=f3e211]
+                      - paragraph [ref=f3e212]: POS + ERP for Philippine businesses
+                - button [ref=f3e213] [cursor=pointer]:
+                  - generic [ref=f3e214]:
+                    - img "Carshey Philippines" [ref=f3e215]
+                    - generic [ref=f3e217]: Live preview
+                    - generic [ref=f3e220]:
+                      - heading "Carshey Philippines" [level=4] [ref=f3e221]
+                      - paragraph [ref=f3e222]: Rent-to-own car marketplace
+                - button [ref=f3e223] [cursor=pointer]:
+                  - generic [ref=f3e224]:
+                    - img "Lazapee" [ref=f3e225]
+                    - generic [ref=f3e227]: Live preview
+                    - generic [ref=f3e230]:
+                      - heading "Lazapee" [level=4] [ref=f3e231]
+                      - paragraph [ref=f3e232]: Full-featured e-commerce storefront
+          - generic [ref=f3e263]:
+            - button "Close" [ref=f3e264] [cursor=pointer]
+            - iframe [ref=f3e269]:
+              - generic [ref=f9e1]:
+                - generic [ref=f9e2]:
+                  - banner [ref=f9e3]:
+                    - generic [ref=f9e6]:
+                      - generic [ref=f9e7]:
+                        - link "+63 915 515 2314" [ref=f9e8] [cursor=pointer]:
+                          - /url: tel:+639155152314
+                        - link "info@carshey.ph" [ref=f9e12] [cursor=pointer]:
+                          - /url: mailto:info@carshey.ph
+                      - generic [ref=f9e17]: Same-Day Process • Immediate Release
+                    - navigation [ref=f9e18]:
+                      - link "Carshey Philippines" [ref=f9e19] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=f9e21]:
+                          - generic [ref=f9e22]: Carshey
+                          - generic [ref=f9e23]: Philippines
+                      - button [ref=f9e24]
+                  - main [ref=f9e26]:
+                    - main [ref=f9e27]:
+                      - generic [ref=f9e31]:
+                        - generic [ref=f9e32]:
+                          - heading "Find Your Dream Car Today" [level=1] [ref=f9e33]
+                          - paragraph [ref=f9e34]: Explore quality vehicles with easy rent-to-own plans. Quick approval and same-day release.
+                          - generic [ref=f9e35]:
+                            - link "Browse Vehicles" [ref=f9e38] [cursor=pointer]:
+                              - /url: /vehicles
+                            - link "Sell Your Car" [ref=f9e41] [cursor=pointer]:
+                              - /url: /sell-car
+                        - img "Hero Car" [ref=f9e43]
+                      - generic [ref=f9e47]:
+                        - generic [ref=f9e48]:
+                          - img "BMW" [ref=f9e49]
+                          - generic [ref=f9e50]: BMW
+                        - generic [ref=f9e51]:
+                          - img "Chevrolet" [ref=f9e52]
+                          - generic [ref=f9e53]: Chevrolet
+                        - generic [ref=f9e54]:
+                          - img "Jaguar" [ref=f9e55]
+                          - generic [ref=f9e56]: Jaguar
+                        - generic [ref=f9e57]:
+                          - img "Hyundai" [ref=f9e58]
+                          - generic [ref=f9e59]: Hyundai
+                        - generic [ref=f9e60]:
+                          - img "Suzuki" [ref=f9e61]
+                          - generic [ref=f9e62]: Suzuki
+                        - generic [ref=f9e63]:
+                          - img "Lexus" [ref=f9e64]
+                          - generic [ref=f9e65]: Lexus
+                      - generic [ref=f9e68]:
+                        - generic [ref=f9e69]:
+                          - heading "Featured Units" [level=2] [ref=f9e70]
+                          - link "View All Vehicles" [ref=f9e72] [cursor=pointer]:
+                            - /url: /vehicles
+                        - generic [ref=f9e73]:
+                          - generic [ref=f9e74]:
+                            - generic [ref=f9e75]:
+                              - img "Toyota Fortuner" [ref=f9e76]
+                              - generic [ref=f9e77]: AVAILABLE
+                            - generic [ref=f9e78]:
+                              - generic [ref=f9e79]:
+                                - heading "Toyota Fortuner" [level=3] [ref=f9e80]
+                                - paragraph [ref=f9e81]: "2024"
+                              - paragraph [ref=f9e82]: N/A
+                            - generic [ref=f9e83]:
+                              - generic [ref=f9e84]:
+                                - generic [ref=f9e85]: Diesel
+                                - generic [ref=f9e90]: Automatic
+                              - paragraph [ref=f9e95]: Premium mid-size SUV.
+                            - link [ref=f9e97] [cursor=pointer]:
+                              - /url: /vehicles/cmi9cfohn000i1fsk95wkvp8r
+                              - button "View Details" [ref=f9e98]
+                          - generic [ref=f9e99]:
+                            - generic [ref=f9e100]:
+                              - img "Toyota Vios" [ref=f9e101]
+                              - generic [ref=f9e102]: AVAILABLE
+                            - generic [ref=f9e103]:
+                              - generic [ref=f9e104]:
+                                - heading "Toyota Vios" [level=3] [ref=f9e105]
+                                - paragraph [ref=f9e106]: "2024"
+                              - paragraph [ref=f9e107]: N/A
+                            - generic [ref=f9e108]:
+                              - generic [ref=f9e109]:
+                                - generic [ref=f9e110]: Gasoline
+                                - generic [ref=f9e115]: Automatic
+                              - paragraph [ref=f9e120]: Reliable entry-level sedan.
+                            - link [ref=f9e122] [cursor=pointer]:
+                              - /url: /vehicles/cmi9cfns900091fskyg97clpn
+                              - button "View Details" [ref=f9e123]
+                      - generic [ref=f9e126]:
+                        - heading "Why Choose Carshey?" [level=2] [ref=f9e127]
+                        - generic [ref=f9e128]:
+                          - generic [ref=f9e129]:
+                            - heading "No Bank Approval" [level=3] [ref=f9e133]
+                            - paragraph [ref=f9e134]: Bypass traditional banking requirements
+                          - generic [ref=f9e135]:
+                            - heading "Same Day Release" [level=3] [ref=f9e140]
+                            - paragraph [ref=f9e141]: Get your car within 24 hours
+                          - generic [ref=f9e142]:
+                            - heading "Flexible Payment" [level=3] [ref=f9e146]
+                            - paragraph [ref=f9e147]: Affordable monthly installments
+                          - generic [ref=f9e148]:
+                            - heading "After-Sales Support" [level=3] [ref=f9e155]
+                            - paragraph [ref=f9e156]: Dedicated customer service team
+                      - generic [ref=f9e159]:
+                        - generic [ref=f9e160]:
+                          - heading "How It Works" [level=2] [ref=f9e161]
+                          - paragraph [ref=f9e162]: Rent to Own in 4 Easy Steps
+                        - generic [ref=f9e163]:
+                          - generic [ref=f9e164]:
+                            - heading "Simple Requirements" [level=3] [ref=f9e169]
+                            - paragraph [ref=f9e170]: 2 valid IDs, proof of income, and proof of billing
+                          - generic [ref=f9e171]:
+                            - heading "One Day Process" [level=3] [ref=f9e176]
+                            - paragraph [ref=f9e177]: Fast approval without bank requirements
+                          - generic [ref=f9e178]:
+                            - heading "Choose Your Car" [level=3] [ref=f9e184]
+                            - paragraph [ref=f9e185]: Select from our wide range of quality vehicles
+                          - generic [ref=f9e186]:
+                            - heading "Same Day Release" [level=3] [ref=f9e192]
+                            - paragraph [ref=f9e193]: Drive home your dream car immediately
+                      - generic [ref=f9e197]:
+                        - heading "Do You Have Something To Sell?" [level=2] [ref=f9e198]
+                        - paragraph [ref=f9e199]: Get the best value for your vehicle. Quick evaluation and instant offers.
+                        - link "SELL YOUR CAR TODAY" [ref=f9e201] [cursor=pointer]:
+                          - /url: /sell-car
+                  - contentinfo [ref=f9e202]:
+                    - generic [ref=f9e203]:
+                      - generic [ref=f9e204]:
+                        - generic [ref=f9e205]:
+                          - link "Carshey" [ref=f9e206] [cursor=pointer]:
+                            - /url: /
+                          - paragraph [ref=f9e212]: The fastest way to get your dream car. Same-day approval. Hassle-free rent-to-own.
+                        - generic [ref=f9e213]:
+                          - heading "Quick Links" [level=3] [ref=f9e214]
+                          - list [ref=f9e215]:
+                            - listitem [ref=f9e216]:
+                              - link "Home" [ref=f9e217] [cursor=pointer]:
+                                - /url: /
+                            - listitem [ref=f9e218]:
+                              - link "Vehicles" [ref=f9e219] [cursor=pointer]:
+                                - /url: /vehicles
+                            - listitem [ref=f9e220]:
+                              - link "Rent to Own" [ref=f9e221] [cursor=pointer]:
+                                - /url: /rent-to-own
+                            - listitem [ref=f9e222]:
+                              - link "Financing" [ref=f9e223] [cursor=pointer]:
+                                - /url: /financing
+                            - listitem [ref=f9e224]:
+                              - link "About" [ref=f9e225] [cursor=pointer]:
+                                - /url: /about
+                            - listitem [ref=f9e226]:
+                              - link "Contact" [ref=f9e227] [cursor=pointer]:
+                                - /url: /contact
+                        - generic [ref=f9e228]:
+                          - heading "Get in Touch" [level=3] [ref=f9e229]
+                          - list [ref=f9e230]:
+                            - listitem [ref=f9e231]: +63 915 515 2314
+                            - listitem [ref=f9e234]: support@carshey.ph
+                          - generic [ref=f9e238]:
+                            - link [ref=f9e239] [cursor=pointer]:
+                              - /url: "#"
+                            - link [ref=f9e242] [cursor=pointer]:
+                              - /url: "#"
+                      - paragraph [ref=f9e247]: © 2026 Carshey Philippines. All rights reserved.
+                - region "Notifications alt+T"
+                - alert [ref=f9e248]
+            - generic [ref=f3e270]:
+              - generic [ref=f3e271]:
+                - generic [ref=f3e272]:
+                  - heading "Carshey Philippines" [level=3] [ref=f3e273]
+                  - paragraph [ref=f3e274]: Rent-to-own car marketplace
+                - link [ref=f3e276] [cursor=pointer]:
+                  - /url: https://carsheyph.vercel.app/
+                  - button "View Live" [ref=f3e277]
+              - paragraph [ref=f3e278]: A rent-to-own vehicle marketplace with catalog, financing flows, quick approval and same-day release — browse cars across brands in a dark, cinematic storefront.
+              - generic [ref=f3e279]:
+                - generic [ref=f3e280]: Next.js
+                - generic [ref=f3e281]: React
+                - generic [ref=f3e282]: Tailwind CSS
+                - generic [ref=f3e283]: E-Commerce
+              - paragraph [ref=f3e284]: Live, interactive preview — scroll and click inside the frame above.
+        - generic [ref=f3e234]:
+          - heading "Experience" [level=2] [ref=f3e236]
+          - paragraph [ref=f3e238]: Detailed experience timeline — coming next.
+        - generic [ref=f3e240]:
+          - heading "Certificates" [level=2] [ref=f3e242]
+          - paragraph [ref=f3e244]: Certificates — coming next.
+        - generic [ref=f3e246]:
+          - heading "Contact" [level=2] [ref=f3e248]
+          - paragraph [ref=f3e250]: iMessage-style contact thread — coming next.
+  - button "Open Next.js Dev Tools" [ref=f3e256] [cursor=pointer]
+  - alert [ref=f3e260]

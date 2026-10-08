@@ -1,0 +1,31 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - img "Lazapee Logo"
+          - heading "Lazapee" [level=1] [ref=e8]
+        - button "Cart" [ref=e9] [cursor=pointer]
+      - textbox "Search products, brands, or categories..." [ref=e19]
+  - generic [ref=e21]:
+    - complementary [ref=e22]:
+      - heading "Filters" [level=2] [ref=e24]
+      - generic [ref=e25]:
+        - generic [ref=e26]: Sort By
+        - combobox [ref=e27]:
+          - option "Default" [selected]
+          - 'option "Price: Low to High"'
+          - 'option "Price: High to Low"'
+          - option "Highest Rated"
+          - option "Best Discount"
+      - generic [ref=e28]:
+        - generic [ref=e29]: Category
+        - combobox [ref=e30]:
+          - option "All Categories" [selected]
+      - generic [ref=e31]:
+        - generic [ref=e32]: "Price Range: $0 - $2000"
+        - slider [ref=e33]: "2000"
+      - button "Reset Filters" [ref=e34] [cursor=pointer]
+    - main [ref=e35]:
+      - paragraph [ref=e37]: Showing 1-0 of 0 products
+      - paragraph [ref=e39]: No products found matching your criteria

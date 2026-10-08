@@ -1,0 +1,239 @@
+- generic [active] [ref=f24e1]:
+  - generic [ref=f24e2]:
+    - generic [ref=f24e3]:
+      - banner [ref=f24e4]:
+        - generic [ref=f24e12]:
+          - generic [ref=f24e13]:
+            - img "Mc Zaldy Yap" [ref=f24e15]
+            - generic [ref=f24e16]:
+              - heading [level=1] [ref=f24e17]:
+                - text: Mc Zaldy Yap
+                - img "Verified" [ref=f24e18]
+              - paragraph [ref=f24e21]: I build fast, conversion-focused websites and web apps that help businesses grow. Next.js · Vue · Laravel — based in Cebu PH, available worldwide.
+              - generic [ref=f24e22]:
+                - generic [ref=f24e23]: Next.js
+                - generic [ref=f24e24]: Vue
+                - generic [ref=f24e25]: TypeScript
+                - generic [ref=f24e26]: Laravel
+                - generic [ref=f24e27]: Tailwind CSS
+          - generic [ref=f24e28]:
+            - generic [ref=f24e29]:
+              - link [ref=f24e30] [cursor=pointer]:
+                - /url: /resume.pdf
+                - button "Résumé" [ref=f24e31]
+              - link [ref=f24e32] [cursor=pointer]:
+                - /url: "#contact"
+                - button "Message me" [ref=f24e33]
+            - generic [ref=f24e34]:
+              - link "LinkedIn" [ref=f24e35] [cursor=pointer]:
+                - /url: https://linkedin.com/in/emciiowhy
+              - link "GitHub" [ref=f24e40] [cursor=pointer]:
+                - /url: https://github.com/emciiowhy
+              - link "Twitter" [ref=f24e44] [cursor=pointer]:
+                - /url: https://x.com/emciiowhy07
+              - link "Facebook" [ref=f24e47] [cursor=pointer]:
+                - /url: https://facebook.com/mckiieeyy1107
+      - navigation [ref=f24e50]:
+        - generic [ref=f24e51]:
+          - link "Projects" [ref=f24e52] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Experience" [ref=f24e54] [cursor=pointer]:
+            - /url: "#experience"
+          - link "Certificates" [ref=f24e56] [cursor=pointer]:
+            - /url: "#certificates"
+      - generic [ref=f24e58]:
+        - complementary [ref=f24e60]:
+          - generic [ref=f24e61]:
+            - heading "Intro" [level=2] [ref=f24e63]
+            - list [ref=f24e65]:
+              - listitem [ref=f24e66]:
+                - generic [ref=f24e70]: From Cebu City, Philippines
+              - listitem [ref=f24e71]:
+                - link "mcmcyap07@gmail.com" [ref=f24e75] [cursor=pointer]:
+                  - /url: mailto:mcmcyap07@gmail.com
+              - listitem [ref=f24e76]:
+                - link "+63 915 515 2314" [ref=f24e79] [cursor=pointer]:
+                  - /url: tel:+639155152314
+              - listitem [ref=f24e80]:
+                - generic [ref=f24e84]: Philippines
+              - listitem [ref=f24e85]:
+                - generic [ref=f24e90]: Filipino, English
+          - generic [ref=f24e91]:
+            - heading "Work Experience" [level=2] [ref=f24e93]
+            - list [ref=f24e95]:
+              - listitem [ref=f24e96]:
+                - generic [ref=f24e101]:
+                  - paragraph [ref=f24e102]: Data Scraper
+                  - paragraph [ref=f24e103]: Lead Generation (Facebook Analytics)
+                  - paragraph [ref=f24e104]: 2022 – 2025
+              - listitem [ref=f24e105]:
+                - generic [ref=f24e110]:
+                  - paragraph [ref=f24e111]: Telephone Interviewer
+                  - paragraph [ref=f24e112]: Dynata
+                  - paragraph [ref=f24e113]: "2024"
+              - listitem [ref=f24e114]:
+                - generic [ref=f24e119]:
+                  - paragraph [ref=f24e120]: ESL Teacher
+                  - paragraph [ref=f24e121]: First English Global
+                  - paragraph [ref=f24e122]: "2022"
+          - generic [ref=f24e123]:
+            - heading "Tech Stack" [level=2] [ref=f24e125]
+            - generic [ref=f24e127]:
+              - generic [ref=f24e128]:
+                - paragraph [ref=f24e129]: Frontend
+                - generic [ref=f24e130]:
+                  - generic [ref=f24e131]: "#nextjs"
+                  - generic [ref=f24e132]: "#react"
+                  - generic [ref=f24e133]: "#typescript"
+                  - generic [ref=f24e134]: "#javascript"
+                  - generic [ref=f24e135]: "#vue"
+                  - generic [ref=f24e136]: "#quasar"
+                  - generic [ref=f24e137]: "#tailwindcss"
+                  - generic [ref=f24e138]: "#html/css"
+              - generic [ref=f24e139]:
+                - paragraph [ref=f24e140]: Backend
+                - generic [ref=f24e141]:
+                  - generic [ref=f24e142]: "#php"
+                  - generic [ref=f24e143]: "#laravel"
+                  - generic [ref=f24e144]: "#nodejs"
+                  - generic [ref=f24e145]: "#express"
+                  - generic [ref=f24e146]: "#restapi"
+              - generic [ref=f24e147]:
+                - paragraph [ref=f24e148]: Database
+                - generic [ref=f24e149]:
+                  - generic [ref=f24e150]: "#neondb"
+                  - generic [ref=f24e151]: "#mysql"
+                  - generic [ref=f24e152]: "#postgresql"
+              - generic [ref=f24e153]:
+                - paragraph [ref=f24e154]: Tools
+                - generic [ref=f24e155]:
+                  - generic [ref=f24e156]: "#git"
+                  - generic [ref=f24e157]: "#github"
+                  - generic [ref=f24e158]: "#vercel"
+                  - generic [ref=f24e159]: "#figma"
+                  - generic [ref=f24e160]: "#framer-motion"
+          - generic [ref=f24e161]:
+            - heading "Education" [level=2] [ref=f24e163]
+            - generic [ref=f24e165]:
+              - img "Cordova Public College logo" [ref=f24e167]
+              - generic [ref=f24e168]:
+                - paragraph [ref=f24e169]: Cordova Public College
+                - paragraph [ref=f24e170]: BS in Information Technology
+                - paragraph [ref=f24e171]: Currently pursuing
+          - generic [ref=f24e172]:
+            - generic [ref=f24e173]:
+              - heading "GitHub Streak" [level=2] [ref=f24e174]
+              - link "Open GitHub profile" [ref=f24e175] [cursor=pointer]:
+                - /url: https://github.com/emciiowhy
+            - generic [ref=f24e180]:
+              - img "emciiowhy GitHub streak stats" [ref=f24e181]
+              - img "emciiowhy GitHub contribution graph" [ref=f24e182]
+          - generic [ref=f24e183]:
+            - heading "Social Links" [level=2] [ref=f24e185]
+            - list [ref=f24e187]:
+              - listitem [ref=f24e188]:
+                - link "GitHub" [ref=f24e189] [cursor=pointer]:
+                  - /url: https://github.com/emciiowhy
+              - listitem [ref=f24e193]:
+                - link "LinkedIn" [ref=f24e194] [cursor=pointer]:
+                  - /url: https://linkedin.com/in/emciiowhy
+              - listitem [ref=f24e199]:
+                - link "Facebook" [ref=f24e200] [cursor=pointer]:
+                  - /url: https://facebook.com/mckiieeyy1107
+        - main [ref=f24e203]:
+          - generic [ref=f24e205]:
+            - generic [ref=f24e206]:
+              - heading "My Creations" [level=2] [ref=f24e207]
+              - button "Filter" [ref=f24e209] [cursor=pointer]
+            - generic [ref=f24e212]:
+              - heading "Featured" [level=3] [ref=f24e213]
+              - generic [ref=f24e214]:
+                - button "VendoPOS Latest Live preview VendoPOS POS + ERP for Philippine businesses" [ref=f24e215] [cursor=pointer]:
+                  - generic [ref=f24e216]:
+                    - img "VendoPOS" [ref=f24e217]
+                    - generic [ref=f24e219]: Latest
+                    - generic [ref=f24e220]: Live preview
+                    - generic [ref=f24e223]:
+                      - heading "VendoPOS" [level=4] [ref=f24e224]
+                      - paragraph [ref=f24e225]: POS + ERP for Philippine businesses
+                - button [ref=f24e226] [cursor=pointer]:
+                  - generic [ref=f24e227]:
+                    - img "Carshey Philippines" [ref=f24e228]
+                    - generic [ref=f24e230]: Live preview
+                    - generic [ref=f24e233]:
+                      - heading "Carshey Philippines" [level=4] [ref=f24e234]
+                      - paragraph [ref=f24e235]: Rent-to-own car marketplace
+                - button [ref=f24e236] [cursor=pointer]:
+                  - generic [ref=f24e237]:
+                    - img "Lazapee" [ref=f24e238]
+                    - generic [ref=f24e240]: Live preview
+                    - generic [ref=f24e243]:
+                      - heading "Lazapee" [level=4] [ref=f24e244]
+                      - paragraph [ref=f24e245]: Full-featured e-commerce storefront
+          - generic [ref=f24e247]:
+            - heading "Experience" [level=2] [ref=f24e249]
+            - list [ref=f24e251]:
+              - listitem [ref=f24e252]:
+                - generic [ref=f24e257]:
+                  - heading "Data Scraper" [level=4] [ref=f24e258]
+                  - generic [ref=f24e259]: 2022 – 2025
+                - paragraph [ref=f24e260]: Lead Generation — Facebook Engagement Analysis
+                - paragraph [ref=f24e261]: Three years scraping and analyzing Facebook engagement data — likes, shares, comments and reach — to drive lead-generation decisions.
+                - generic [ref=f24e262]:
+                  - generic [ref=f24e263]: Data Scraping
+                  - generic [ref=f24e264]: Analytics
+                  - generic [ref=f24e265]: Automation
+              - listitem [ref=f24e266]:
+                - generic [ref=f24e271]:
+                  - heading "Telephone Interviewer" [level=4] [ref=f24e272]
+                  - generic [ref=f24e273]: May 2024 – Nov 2024
+                - paragraph [ref=f24e274]: Dynata
+                - paragraph [ref=f24e275]: Conducted outbound and inbound calls gathering opinions from US citizens for market-research surveys.
+                - generic [ref=f24e276]:
+                  - generic [ref=f24e277]: Market Research
+                  - generic [ref=f24e278]: Communication
+                  - generic [ref=f24e279]: Data Collection
+              - listitem [ref=f24e280]:
+                - generic [ref=f24e285]:
+                  - heading "On-Call ESL Teacher" [level=4] [ref=f24e286]
+                  - generic [ref=f24e287]: 2022 · 6 months
+                - paragraph [ref=f24e288]: First English Global
+                - paragraph [ref=f24e289]: Taught basic English communication to foreign students — grammar, vocabulary and conversational fluency.
+                - generic [ref=f24e290]:
+                  - generic [ref=f24e291]: Teaching
+                  - generic [ref=f24e292]: Communication
+                  - generic [ref=f24e293]: Mentoring
+          - generic [ref=f24e295]:
+            - heading "Certificates" [level=2] [ref=f24e297]
+            - paragraph [ref=f24e304]: Currently pursuing a BS in Information Technology and collecting credentials — certificates will land here as they come in.
+          - generic [ref=f24e306]:
+            - heading "Send me a message" [level=2] [ref=f24e308]
+            - generic [ref=f24e310]:
+              - generic [ref=f24e311]:
+                - img "Mc Zaldy Yap" [ref=f24e313]
+                - generic [ref=f24e314]:
+                  - paragraph [ref=f24e315]: Mc Zaldy Yap
+                  - paragraph [ref=f24e316]: Active now
+              - generic [ref=f24e318]:
+                - generic [ref=f24e319]: Hey there! Thanks for scrolling all the way down.
+                - generic [ref=f24e321]: I'm Mc. What's your name?
+              - generic [ref=f24e323]:
+                - textbox "Type your name…" [ref=f24e324]
+                - button "Send" [disabled] [ref=f24e325]
+    - contentinfo [ref=f24e328]:
+      - generic [ref=f24e329]:
+        - generic [ref=f24e330]:
+          - paragraph [ref=f24e331]: Mc Zaldy Yap
+          - paragraph [ref=f24e332]: Web developer · Cebu City, Philippines
+        - generic [ref=f24e333]:
+          - link "GitHub" [ref=f24e334] [cursor=pointer]:
+            - /url: https://github.com/emciiowhy
+          - link "LinkedIn" [ref=f24e338] [cursor=pointer]:
+            - /url: https://linkedin.com/in/emciiowhy
+          - link "Twitter" [ref=f24e343] [cursor=pointer]:
+            - /url: https://x.com/emciiowhy07
+          - link "Facebook" [ref=f24e346] [cursor=pointer]:
+            - /url: https://facebook.com/mckiieeyy1107
+        - paragraph [ref=f24e349]: © 2026 Mc Zaldy Yap · Built with Next.js, Tailwind & Framer Motion
+  - button "Open Next.js Dev Tools" [ref=f24e355] [cursor=pointer]
+  - alert [ref=f24e359]

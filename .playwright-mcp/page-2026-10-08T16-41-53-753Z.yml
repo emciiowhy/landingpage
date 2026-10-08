@@ -1,0 +1,338 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img "Header Cover" [ref=e6]
+      - generic [ref=e7]:
+        - img "Nathaniel Faborada" [ref=e9]
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - heading "Nathaniel Faborada ( Niel ) 👋" [level=1] [ref=e12]:
+              - text: Nathaniel Faborada
+              - generic [ref=e13]: ( Niel )
+              - generic [ref=e14]: 👋
+            - paragraph [ref=e15]:
+              - text: Aspiring Junior software developer based in Pandi, Bulacan, specializing in
+              - generic [ref=e16]: React
+              - text: ","
+              - generic [ref=e17]: Node.js
+              - text: ", and"
+              - generic [ref=e18]: REST API
+              - text: development. Builds clean, responsive applications with a focus on automation, and performance.
+          - link "Resume" [ref=e20] [cursor=pointer]:
+            - /url: assets/Faborada_Nathaniel_Web_dev.pdf
+    - navigation "Profile navigation" [ref=e24]:
+      - list [ref=e25]:
+        - listitem [ref=e26]:
+          - link "All" [ref=e27] [cursor=pointer]:
+            - /url: "#all"
+        - listitem [ref=e28]:
+          - link "Collaborators" [ref=e29] [cursor=pointer]:
+            - /url: "#collaborators"
+        - listitem [ref=e30]:
+          - link "Certificates" [ref=e31] [cursor=pointer]:
+            - /url: "#certificates"
+    - generic [ref=e32]:
+      - complementary [ref=e33]:
+        - generic [ref=e34]:
+          - heading "Personal details" [level=2] [ref=e35]
+          - list [ref=e36]:
+            - listitem [ref=e37]:
+              - generic [ref=e41]: From Pandi, Bulacan
+            - listitem [ref=e42]:
+              - generic [ref=e46]: faboradanathaniel@gmail.com
+            - listitem [ref=e47]:
+              - generic [ref=e51]: Philippines
+            - listitem [ref=e52]:
+              - generic [ref=e55]: Filipino, English
+        - generic [ref=e56]:
+          - heading "Work Experience" [level=2] [ref=e57]
+          - generic [ref=e62]:
+            - heading "JCAS Logistics" [level=3] [ref=e63]
+            - generic [ref=e64]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: Internship Developer
+                - generic [ref=e70]: April 2025 - May 2025
+              - generic [ref=e73]:
+                - generic [ref=e74]: Freelance Developer
+                - generic [ref=e76]: June 2025 - Sept 2025
+        - generic [ref=e77]:
+          - heading "Learned Skills" [level=2] [ref=e78]
+          - paragraph [ref=e79]: Technologies I use to build reliable, scalable products.
+          - generic [ref=e81]:
+            - generic [ref=e82]: "#javascript"
+            - generic [ref=e83]: "#react"
+            - generic [ref=e84]: "#html/css"
+            - generic [ref=e85]: "#flutterflow"
+            - generic [ref=e86]: "#tailwindcss"
+          - generic [ref=e89]:
+            - generic [ref=e90]: "#node.js"
+            - generic [ref=e91]: "#python"
+            - generic [ref=e92]: "#RESTful API"
+            - generic [ref=e93]: "#FastAPI"
+            - generic [ref=e94]: "#php"
+            - generic [ref=e95]: "#auth"
+            - generic [ref=e96]: "#express"
+          - generic [ref=e99]:
+            - generic [ref=e100]: "#postgresql"
+            - generic [ref=e101]: "#mysql"
+            - generic [ref=e102]: "#docker"
+            - generic [ref=e103]: "#github_actions"
+          - generic [ref=e106]:
+            - generic [ref=e107]: "#netlify"
+            - generic [ref=e108]: "#railway"
+          - generic [ref=e111]:
+            - generic [ref=e112]: "#gemini"
+            - generic [ref=e113]: "#chatgpt"
+            - generic [ref=e114]: "#claude"
+        - generic [ref=e115]:
+          - heading "Education" [level=2] [ref=e116]
+          - generic [ref=e122]:
+            - generic [ref=e123]: College of Mary Immaculate of Pandi Bulacan Inc.
+            - generic [ref=e124]:
+              - generic [ref=e125]: Bachelor of Science in Computer Science
+              - generic [ref=e126]: 2022-2026
+        - generic [ref=e127]:
+          - heading "Social Links" [level=2] [ref=e128]
+          - list [ref=e129]:
+            - listitem [ref=e130]:
+              - link "Github account" [ref=e131] [cursor=pointer]:
+                - /url: https://github.com/nathanielfaborada
+            - listitem [ref=e134]:
+              - link "LinkedIn account" [ref=e135] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/nathaniel-faborada/
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - heading "Collaborators" [level=2] [ref=e140]
+            - link "See all collaborators" [ref=e141] [cursor=pointer]:
+              - /url: "#collaborators"
+          - generic [ref=e142]:
+            - generic [ref=e458]:
+              - img "Yeshel ⌓‿⌓" [ref=e459]
+              - generic [ref=e460]:
+                - generic "Yeshel ⌓‿⌓" [ref=e461]
+                - generic [ref=e462]: 3 Followers
+                - generic [ref=e463]: 2 Following
+              - link "Visit" [ref=e464] [cursor=pointer]:
+                - /url: https://github.com/raecellann
+            - generic [ref=e469]:
+              - img "esmabe-wilson" [ref=e470]
+              - generic [ref=e471]:
+                - generic "esmabe-wilson" [ref=e472]
+                - generic [ref=e473]: 12 Followers
+                - generic [ref=e474]: 11 Following
+              - link "Visit" [ref=e475] [cursor=pointer]:
+                - /url: https://github.com/Wesmabe1129
+            - generic [ref=e480]:
+              - img "Zeldrickjesus" [ref=e481]
+              - generic [ref=e482]:
+                - generic "Zeldrickjesus" [ref=e483]
+                - generic [ref=e484]: 8 Followers
+                - generic [ref=e485]: 16 Following
+              - link "Visit" [ref=e486] [cursor=pointer]:
+                - /url: https://github.com/zjdelossantos
+      - main [ref=e161]:
+        - generic [ref=e162]:
+          - heading "My Creations" [level=2] [ref=e163]
+          - button "Filter" [ref=e166] [cursor=pointer]
+        - generic [ref=e168]:
+          - generic [ref=e170]:
+            - img "Nathaniel Faborada" [ref=e171]
+            - generic [ref=e172]: Nathaniel Faborada
+          - generic [ref=e181]:
+            - paragraph [ref=e182]:
+              - text: 📌
+              - strong [ref=e183]: Immacullearn — Collaborative Learning System
+              - generic [ref=e184]: · College Thesis Capstone
+            - generic [ref=e185]: 📅 Apr 2026
+          - paragraph [ref=e186]:
+            - text: 💻Immacullearn is a learning management system (LMS) built as a thesis project, designed for academic institutions. It supports three user roles — students, professors, and admin — e...
+            - button "See more" [ref=e187] [cursor=pointer]
+          - generic [ref=e188]:
+            - generic [ref=e189]: "#javascript"
+            - generic [ref=e190]: "#supabase"
+            - generic [ref=e191]: "#mysql"
+            - generic [ref=e192]: "#postgresql"
+            - generic [ref=e193]: "#expressJS"
+          - region "Immacullearn — Collaborative Learning System image gallery" [ref=e194]:
+            - img "Immacullearn — Collaborative Learning System screenshot 2" [ref=e492]
+            - button "Previous image" [ref=e198] [cursor=pointer]: ❮
+            - button "Next image" [ref=e199] [cursor=pointer]: ❯
+            - generic [ref=e200]: 2 / 2
+            - generic [ref=e201]:
+              - button "Go to slide 1" [ref=e202] [cursor=pointer]
+              - button "Go to slide 2" [ref=e203] [cursor=pointer]
+          - generic [ref=e204]:
+            - generic [ref=e205]: ⭐
+            - generic [ref=e206]:
+              - link "Source" [ref=e207] [cursor=pointer]:
+                - /url: https://github.com/Immaculearn
+              - link "Visit" [ref=e211] [cursor=pointer]:
+                - /url: https://immaculearn.online/
+        - generic [ref=e216]:
+          - generic [ref=e218]:
+            - img "Nathaniel Faborada" [ref=e219]
+            - generic [ref=e220]: Nathaniel Faborada
+          - generic [ref=e229]:
+            - paragraph [ref=e230]:
+              - text: 📌
+              - strong [ref=e231]: Kamada Logistics
+              - generic [ref=e232]: · Internship
+            - generic [ref=e233]: 📅 May 2025
+          - paragraph [ref=e234]:
+            - text: 💻Contributed to the development of an HR module and Driver’s Companion App, focusing on UI/UX design, frontend development, and backend logic to improve user experience and navigati...
+            - button "See more" [ref=e235] [cursor=pointer]
+          - generic [ref=e236]:
+            - generic [ref=e237]: "#FlutterFlow"
+            - generic [ref=e238]: "#Supabase"
+            - generic [ref=e239]: "#Balsamiq"
+          - region "Kamada Logistics image gallery" [ref=e240]:
+            - img "Kamada Logistics screenshot 1" [ref=e243]
+        - generic [ref=e244]:
+          - generic [ref=e246]:
+            - img "Nathaniel Faborada" [ref=e247]
+            - generic [ref=e248]: Nathaniel Faborada
+          - generic [ref=e257]:
+            - paragraph [ref=e258]:
+              - text: 📌
+              - strong [ref=e259]: Jenather Auto Shop
+              - generic [ref=e260]: · Organization Project
+            - generic [ref=e261]: 📅 Feb 2025
+          - paragraph [ref=e262]:
+            - text: 💻Jenather Auto Shop is a web-based system for managing an auto shop built with PHP, HTML, CSS, and MySQL. It allows customers to browse cars, while admins can manage inventory and u...
+            - button "See more" [ref=e263] [cursor=pointer]
+          - generic [ref=e264]:
+            - generic [ref=e265]: "#php"
+            - generic [ref=e266]: "#mysql"
+            - generic [ref=e267]: "#supabase"
+            - generic [ref=e268]: "#html/css"
+            - generic [ref=e269]: "#Railway"
+          - region "Jenather Auto Shop image gallery" [ref=e270]:
+            - img "Jenather Auto Shop screenshot 2" [ref=e494]
+            - button "Previous image" [ref=e274] [cursor=pointer]: ❮
+            - button "Next image" [ref=e275] [cursor=pointer]: ❯
+            - generic [ref=e276]: 2 / 3
+            - generic [ref=e277]:
+              - button "Go to slide 1" [ref=e278] [cursor=pointer]
+              - button "Go to slide 2" [ref=e279] [cursor=pointer]
+              - button "Go to slide 3" [ref=e280] [cursor=pointer]
+          - generic [ref=e281]:
+            - generic [ref=e282]: ⭐
+            - link "Source" [ref=e284] [cursor=pointer]:
+              - /url: https://github.com/orgs/Jenather-Auto-Shop
+        - generic [ref=e288]:
+          - generic [ref=e290]:
+            - img "Nathaniel Faborada" [ref=e291]
+            - generic [ref=e292]: Nathaniel Faborada
+          - generic [ref=e301]:
+            - paragraph [ref=e302]:
+              - text: 📌
+              - strong [ref=e303]: Threads Clone
+              - generic [ref=e304]: · Organization Project
+            - generic [ref=e305]: 📅 Nov 2024
+          - paragraph [ref=e306]:
+            - text: 💻Threads Clone is a RESTful API that replicates the core features of the Threads social media platform, built with JWT-based authentication for secure user sessions. It supports ful...
+            - button "See more" [ref=e307] [cursor=pointer]
+          - generic [ref=e308]:
+            - generic [ref=e309]: "#javascript"
+            - generic [ref=e310]: "#node.js"
+            - generic [ref=e311]: "#html/css"
+            - generic [ref=e312]: "#MySQL"
+          - region "Threads Clone image gallery" [ref=e313]:
+            - img "Threads Clone screenshot 2" [ref=e496]
+            - button "Previous image" [ref=e317] [cursor=pointer]: ❮
+            - button "Next image" [ref=e318] [cursor=pointer]: ❯
+            - generic [ref=e319]: 2 / 2
+            - generic [ref=e320]:
+              - button "Go to slide 1" [ref=e321] [cursor=pointer]
+              - button "Go to slide 2" [ref=e322] [cursor=pointer]
+          - generic [ref=e323]:
+            - generic [ref=e324]: ⭐
+            - link "Source" [ref=e326] [cursor=pointer]:
+              - /url: https://github.com/Treads-Clone
+        - generic [ref=e330]:
+          - generic [ref=e332]:
+            - img "Nathaniel Faborada" [ref=e333]
+            - generic [ref=e334]: Nathaniel Faborada
+          - generic [ref=e343]:
+            - paragraph [ref=e344]:
+              - text: 📌
+              - strong [ref=e345]: New York Times
+              - generic [ref=e346]: · Personal Project
+            - generic [ref=e347]: 📅 Sep 2024
+          - paragraph [ref=e348]:
+            - text: 💻A web application that fetches and displays articles from the New York Times API.
+            - button "See more" [ref=e349] [cursor=pointer]
+          - generic [ref=e350]:
+            - generic [ref=e351]: "#nyt_api"
+            - generic [ref=e352]: "#html/css"
+            - generic [ref=e353]: "#javascript"
+          - region "New York Times image gallery" [ref=e354]:
+            - img "New York Times screenshot 2" [ref=e498]
+            - button "Previous image" [ref=e358] [cursor=pointer]: ❮
+            - button "Next image" [ref=e359] [cursor=pointer]: ❯
+            - generic [ref=e360]: 2 / 2
+            - generic [ref=e361]:
+              - button "Go to slide 1" [ref=e362] [cursor=pointer]
+              - button "Go to slide 2" [ref=e363] [cursor=pointer]
+          - generic [ref=e364]:
+            - generic [ref=e365]: ⭐
+            - generic [ref=e366]:
+              - link "Source" [ref=e367] [cursor=pointer]:
+                - /url: https://github.com/nathanielfaborada/appsdev-newyork-times
+              - link "Visit" [ref=e371] [cursor=pointer]:
+                - /url: https://nathanielfaborada.github.io/appsdev-newyork-times
+        - generic [ref=e376]:
+          - generic [ref=e378]:
+            - img "Nathaniel Faborada" [ref=e379]
+            - generic [ref=e380]: Nathaniel Faborada
+          - generic [ref=e389]:
+            - paragraph [ref=e390]:
+              - text: 📌
+              - strong [ref=e391]: Weather Website
+              - generic [ref=e392]: · Personal Project
+            - generic [ref=e393]: 📅 Jul 2024
+          - paragraph [ref=e394]:
+            - text: 💻Built a responsive news application inspired by the New York Times, fetching live articles via REST API and rendering them into clean, editorial-style layouts using vanilla JavaScr...
+            - button "See more" [ref=e395] [cursor=pointer]
+          - generic [ref=e396]:
+            - generic [ref=e397]: "#html/css"
+            - generic [ref=e398]: "#javascript"
+          - region "Weather Website image gallery" [ref=e399]:
+            - img "Weather Website screenshot 1" [ref=e402]
+          - generic [ref=e403]:
+            - generic [ref=e404]: ⭐
+            - generic [ref=e405]:
+              - link "Source" [ref=e406] [cursor=pointer]:
+                - /url: https://github.com/nathanielfaborada/WeatherWeb
+              - link "Visit" [ref=e410] [cursor=pointer]:
+                - /url: https://panahon-mo.netlify.app/
+        - generic [ref=e415]:
+          - generic [ref=e417]:
+            - img "Nathaniel Faborada" [ref=e418]
+            - generic [ref=e419]: Nathaniel Faborada
+          - generic [ref=e428]:
+            - paragraph [ref=e429]:
+              - text: 📌
+              - strong [ref=e430]: ai-driven-post-creator
+              - generic [ref=e431]: · Personal Project
+            - generic [ref=e432]: 📅 Jan 2025
+          - paragraph [ref=e433]:
+            - text: 💻This service automatically creates and publishes content to your Facebook page powered by AI. No more writer's block. No more missed posting days. Just consistent, engaging content...
+            - button "See more" [ref=e434] [cursor=pointer]
+          - generic [ref=e435]:
+            - generic [ref=e436]: "#javascript"
+            - generic [ref=e437]: "#node.js"
+            - generic [ref=e438]: "#axios"
+            - generic [ref=e439]: "#google gemini api"
+            - generic [ref=e440]: "#mlbb hero api"
+            - generic [ref=e441]: "#facebook graph api v24.0"
+          - region "ai-driven-post-creator image gallery" [ref=e442]:
+            - img "ai-driven-post-creator screenshot 1" [ref=e445]
+          - generic [ref=e446]:
+            - generic [ref=e447]: ⭐
+            - generic [ref=e448]:
+              - link "Source" [ref=e449] [cursor=pointer]:
+                - /url: https://github.com/nathanielfaborada/ai-driven-post-creator
+              - link "Visit" [ref=e453] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=61561184012011
+  - region "Notifications Alt+T"

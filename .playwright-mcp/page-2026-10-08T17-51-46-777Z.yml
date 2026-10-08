@@ -1,0 +1,145 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e3]:
+    - banner [ref=f7e4]:
+      - img "Cover" [ref=f7e6]
+      - generic [ref=f7e9]:
+        - generic [ref=f7e10]:
+          - img "Mc Zaldy Yap" [ref=f7e12]
+          - generic [ref=f7e13]:
+            - heading "Mc Zaldy Yap 👋 Verified" [level=1] [ref=f7e14]:
+              - text: Mc Zaldy Yap
+              - generic [ref=f7e15]: 👋
+              - img "Verified" [ref=f7e16]
+            - paragraph [ref=f7e19]: Aspiring web developer building fast, responsive apps. Next.js · React · TypeScript — based in Cebu City, PH.
+            - generic [ref=f7e20]:
+              - generic [ref=f7e21]: Next.js
+              - generic [ref=f7e22]: React
+              - generic [ref=f7e23]: TypeScript
+              - generic [ref=f7e24]: Tailwind CSS
+        - generic [ref=f7e25]:
+          - generic [ref=f7e26]:
+            - link [ref=f7e27] [cursor=pointer]:
+              - /url: /resume.pdf
+              - button "Résumé" [ref=f7e28]
+            - link [ref=f7e29] [cursor=pointer]:
+              - /url: "#contact"
+              - button "Message me" [ref=f7e30]
+          - generic [ref=f7e31]:
+            - link "LinkedIn" [ref=f7e32] [cursor=pointer]:
+              - /url: https://linkedin.com/in/emciiowhy
+            - link "GitHub" [ref=f7e37] [cursor=pointer]:
+              - /url: https://github.com/emciiowhy
+            - link "Twitter" [ref=f7e41] [cursor=pointer]:
+              - /url: https://x.com/emciiowhy07
+            - link "Facebook" [ref=f7e44] [cursor=pointer]:
+              - /url: https://facebook.com/mckiieeyy1107
+    - navigation [ref=f7e47]:
+      - generic [ref=f7e48]:
+        - link "Projects" [ref=f7e49] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Experience" [ref=f7e51] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Certificates" [ref=f7e53] [cursor=pointer]:
+          - /url: "#certificates"
+    - generic [ref=f7e55]:
+      - complementary [ref=f7e57]:
+        - generic [ref=f7e58]:
+          - heading "Intro" [level=2] [ref=f7e60]
+          - list [ref=f7e62]:
+            - listitem [ref=f7e63]:
+              - generic [ref=f7e67]: From Cebu City, Philippines
+            - listitem [ref=f7e68]:
+              - link "mcmcyap07@gmail.com" [ref=f7e72] [cursor=pointer]:
+                - /url: mailto:mcmcyap07@gmail.com
+            - listitem [ref=f7e73]:
+              - link "+63 915 515 2314" [ref=f7e76] [cursor=pointer]:
+                - /url: tel:+639155152314
+            - listitem [ref=f7e77]:
+              - generic [ref=f7e81]: Philippines
+            - listitem [ref=f7e82]:
+              - generic [ref=f7e87]: Filipino, English
+        - generic [ref=f7e88]:
+          - heading "Work Experience" [level=2] [ref=f7e90]
+          - list [ref=f7e92]:
+            - listitem [ref=f7e93]:
+              - generic [ref=f7e98]:
+                - paragraph [ref=f7e99]: Data Scraper
+                - paragraph [ref=f7e100]: Lead Generation (Facebook Analytics)
+                - paragraph [ref=f7e101]: 2022 – 2025
+            - listitem [ref=f7e102]:
+              - generic [ref=f7e107]:
+                - paragraph [ref=f7e108]: Telephone Interviewer
+                - paragraph [ref=f7e109]: Dynata
+                - paragraph [ref=f7e110]: "2024"
+            - listitem [ref=f7e111]:
+              - generic [ref=f7e116]:
+                - paragraph [ref=f7e117]: ESL Teacher
+                - paragraph [ref=f7e118]: First English Global
+                - paragraph [ref=f7e119]: "2022"
+        - generic [ref=f7e120]:
+          - heading "Tech Stack" [level=2] [ref=f7e122]
+          - generic [ref=f7e124]:
+            - generic [ref=f7e125]:
+              - paragraph [ref=f7e126]: Frontend
+              - generic [ref=f7e127]:
+                - generic [ref=f7e128]: "#nextjs"
+                - generic [ref=f7e129]: "#react"
+                - generic [ref=f7e130]: "#typescript"
+                - generic [ref=f7e131]: "#tailwindcss"
+                - generic [ref=f7e132]: "#html/css"
+            - generic [ref=f7e133]:
+              - paragraph [ref=f7e134]: Backend
+              - generic [ref=f7e135]:
+                - generic [ref=f7e136]: "#nodejs"
+                - generic [ref=f7e137]: "#express"
+                - generic [ref=f7e138]: "#restapi"
+                - generic [ref=f7e139]: "#resend"
+            - generic [ref=f7e140]:
+              - paragraph [ref=f7e141]: Tools
+              - generic [ref=f7e142]:
+                - generic [ref=f7e143]: "#git"
+                - generic [ref=f7e144]: "#vercel"
+                - generic [ref=f7e145]: "#figma"
+                - generic [ref=f7e146]: "#framer-motion"
+        - generic [ref=f7e147]:
+          - heading "Education" [level=2] [ref=f7e149]
+          - generic [ref=f7e156]:
+            - paragraph [ref=f7e157]: BS in Information Technology
+            - paragraph [ref=f7e158]: Currently pursuing
+        - generic [ref=f7e159]:
+          - generic [ref=f7e160]:
+            - heading "GitHub Streak" [level=2] [ref=f7e161]
+            - link "Open GitHub profile" [ref=f7e162] [cursor=pointer]:
+              - /url: https://github.com/emciiowhy
+          - generic [ref=f7e167]:
+            - img "emciiowhy GitHub streak stats" [ref=f7e168]
+            - img "emciiowhy GitHub contribution graph" [ref=f7e169]
+        - generic [ref=f7e170]:
+          - heading "Social Links" [level=2] [ref=f7e172]
+          - list [ref=f7e174]:
+            - listitem [ref=f7e175]:
+              - link "GitHub" [ref=f7e176] [cursor=pointer]:
+                - /url: https://github.com/emciiowhy
+            - listitem [ref=f7e180]:
+              - link "LinkedIn" [ref=f7e181] [cursor=pointer]:
+                - /url: https://linkedin.com/in/emciiowhy
+            - listitem [ref=f7e186]:
+              - link "Facebook" [ref=f7e187] [cursor=pointer]:
+                - /url: https://facebook.com/mckiieeyy1107
+      - main [ref=f7e190]:
+        - generic [ref=f7e192]:
+          - generic [ref=f7e193]:
+            - heading "My Creations" [level=2] [ref=f7e194]
+            - button "Filter" [ref=f7e195] [cursor=pointer]
+          - paragraph [ref=f7e197]: Netflix-style project rows with live previews — coming in the next build pass.
+        - generic [ref=f7e199]:
+          - heading "Experience" [level=2] [ref=f7e201]
+          - paragraph [ref=f7e203]: Detailed experience timeline — coming next.
+        - generic [ref=f7e205]:
+          - heading "Certificates" [level=2] [ref=f7e207]
+          - paragraph [ref=f7e209]: Certificates — coming next.
+        - generic [ref=f7e211]:
+          - heading "Contact" [level=2] [ref=f7e213]
+          - paragraph [ref=f7e215]: iMessage-style contact thread — coming next.
+  - button "Open Next.js Dev Tools" [ref=f7e221] [cursor=pointer]
+  - alert [ref=f7e225]
