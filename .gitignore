@@ -1,11 +1,9 @@
-
-
-# Create .gitignore file
-@"
 # Environment variables
 .env
 .env.local
 .env.production
+backend/.env
+frontend/.env.local
 
 # Dependencies
 node_modules/
@@ -14,6 +12,10 @@ node_modules/
 backend/dist/
 backend/build/
 
+# Next.js / frontend build
+frontend/.next/
+.dist/
+
 # Logs
 *.log
 npm-debug.log*
@@ -21,4 +23,11 @@ npm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
-"@ | Out-File -FilePath .gitignore -Encoding utf8
+
+# AI agent skills (installed via `npx skills add`, not tracked)
+.agents/
+.claude/skills/
+skills-lock.json
+
+# Playwright MCP capture artifacts
+.playwright-mcp/
