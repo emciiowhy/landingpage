@@ -59,6 +59,15 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
 
+      fontFamily: {
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+
+      boxShadow: {
+        card: "0 2px 12px rgba(0,0,0,0.35)",
+        "card-hover": "0 8px 28px rgba(0,0,0,0.55)",
+      },
+
       // ✅ Add waving animation here
       keyframes: {
         wave: {
