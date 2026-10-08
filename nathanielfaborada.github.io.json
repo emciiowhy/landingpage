@@ -1,0 +1,79 @@
+{
+  "source": "https://nathanielfaborada.github.io/",
+  "concept": "A developer portfolio built as a pixel-faithful Facebook profile clone: cover photo + circular avatar, Intro/Work/Skills/Education/Social/Collaborators sidebar cards, and projects rendered as feed posts.",
+  "tokens": {
+    "spacing": {
+      "scale": [4, 6, 8, 10, 12, 16, 20, 24],
+      "base_unit": 4,
+      "section_gap": "16px"
+    },
+    "typography": {
+      "families": ["Segoe UI", "Arial"],
+      "scale": [
+        { "role": "name/h1", "size": "24px", "weight": "700", "family": "Segoe UI" },
+        { "role": "card-title", "size": "17.6px", "weight": "700", "family": "Segoe UI" },
+        { "role": "body", "size": "15px", "weight": "400", "family": "Segoe UI" },
+        { "role": "body-strong", "size": "15px", "weight": "600", "family": "Segoe UI" },
+        { "role": "meta/label", "size": "13.12px", "weight": "600", "family": "Segoe UI" },
+        { "role": "button", "size": "12.8px", "weight": "600", "family": "Segoe UI" },
+        { "role": "timestamp", "size": "11.52px", "weight": "400", "family": "Segoe UI" }
+      ],
+      "dominant_weight": "600"
+    },
+    "colors": [
+      { "role": "background", "value": "#F0F2F5" },
+      { "role": "surface-card", "value": "#FFFFFF" },
+      { "role": "border/pill-fill", "value": "#E4E6EB" },
+      { "role": "text-primary", "value": "#050505" },
+      { "role": "text-secondary", "value": "#65676B" },
+      { "role": "text-heading", "value": "#1C1E21" },
+      { "role": "accent", "value": "#1877F2" }
+    ],
+    "radius": ["6px", "10px", "12px", "50%"],
+    "shadows": [
+      "0 2px 12px rgba(0,0,0,0.08)",
+      "0 2px 8px rgba(0,0,0,0.08)",
+      "0 1px 3px rgba(0,0,0,0.04)",
+      "0 4px 12px rgba(0,0,0,0.15)"
+    ],
+    "image_ratios": [
+      { "usage": "cover-banner", "ratio": "8.68:1" },
+      { "usage": "post-screenshot", "ratio": "2.08:1" },
+      { "usage": "carousel-frame", "ratio": "1.78:1" },
+      { "usage": "avatar", "ratio": "1:1" }
+    ],
+    "grid": { "max_width": "1218px", "columns": 2, "template": "360px 842px", "gutter": "16px" },
+    "motion": { "properties": ["background", "color"], "duration": "0.15s-0.2s", "easing": "ease-in-out" },
+    "interaction": { "focus_visible": false, "reduced_motion": false }
+  },
+  "taste": [
+    {
+      "name": "Borrowed Interface",
+      "trigger": "When deciding how a hiring manager navigates an unknown developer's work",
+      "decision": "Cloned Facebook's profile shell as the portfolio layout over inventing an original one",
+      "reason": "Recognition beats comprehension - visitors spend zero attention learning the layout and all of it on the work; the familiarity also reads as wit",
+      "evidence": ["#F0F2F5 canvas", "#1877F2 accent", "Segoe UI 466x", "360px 842px feed grid", "friends-list 'Collaborators' card with Followers/Following + Visit"]
+    },
+    {
+      "name": "Projects-as-Posts",
+      "trigger": "When presenting each project's title, blurb, stack and screenshot",
+      "decision": "Framed each project as a social feed post over a static project card or case-study page",
+      "reason": "A feed invites frictionless scrolling, so more projects actually get viewed than a gallery of equal tiles delivers",
+      "evidence": ["author row + verified check", "date badge Apr 2026/Sep 2024", "hashtag tech pills #javascript #supabase", "1.78:1 carousel with 1/2 counter", "Source/Visit/star action row"]
+    },
+    {
+      "name": "Weight Over Size",
+      "trigger": "When establishing hierarchy on a page holding many projects, skills and bio blocks at once",
+      "decision": "Drove emphasis with font-weight (600/700) and compressed the type scale over using a tall 40px+ display scale",
+      "reason": "A profile is read as information, not a pitch - big headings would waste the vertical space the feed needs and break the 'real account' illusion",
+      "evidence": ["weight 600 used 87x vs 400 used 45x", "sizes clustered 11.5-17.6px", "only one 24px element", "16px section gaps"]
+    },
+    {
+      "name": "System-Font, No Web Font (restraint)",
+      "trigger": "When choosing typography for a site whose whole premise is mimicry",
+      "decision": "Shipped native Segoe UI + Arial fallback and loaded NO brand/display webfont, rejecting the usual portfolio characterful typeface",
+      "reason": "The authenticity of the Facebook impression depends on Facebook's actual font - a designed typeface would announce 'crafted website' and puncture the illusion",
+      "evidence": ["uniqueFamilies = Segoe UI (466) + Arial (11) only", "no @font-face payload", "system-native weights 400/500/600/700"]
+    }
+  ]
+}
