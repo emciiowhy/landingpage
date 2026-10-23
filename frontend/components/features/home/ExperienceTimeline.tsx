@@ -2,6 +2,22 @@ import { Briefcase } from 'lucide-react';
 
 const timeline = [
   {
+    role: 'B2B Sales Representative',
+    org: 'Work-From-Home BPO',
+    period: '2025 – Present',
+    description:
+      'Selling B2B solutions to international clients from home — prospecting cold leads, running discovery calls, handling objections and following up until the deal closes. Comfortable owning a pipeline and hitting targets remotely.',
+    tags: ['B2B Sales', 'Lead Generation', 'Remote Work'],
+  },
+  {
+    role: 'Freelance Video Editor',
+    org: 'Self-Employed',
+    period: '2025 – Present',
+    description:
+      'Editing promotional videos, AI-generated content, UGC ads and talking-head clips for brands and creators — scripting the cut, adding captions, color grading and sound design to keep viewers watching to the end.',
+    tags: ['Video Editing', 'UGC', 'AI Video', 'Promos'],
+  },
+  {
     role: 'Data Scraper',
     org: 'Lead Generation — Facebook Engagement Analysis',
     period: '2022 – 2025',

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Github, Loader2, MonitorPlay, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { EngagementBar } from '@/components/engagement/EngagementBar';
 import type { Project } from '@/lib/projects';
 
 interface ProjectModalProps {
@@ -148,6 +149,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   Live, interactive preview — scroll and click inside the frame above.
                 </p>
               )}
+
+              <EngagementBar targetType="project" targetId={project.id} />
             </div>
           </motion.div>
         </motion.div>

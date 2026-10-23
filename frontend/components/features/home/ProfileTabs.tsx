@@ -7,6 +7,7 @@ const tabs = [
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'certificates', label: 'Certificates' },
+  { id: 'portfolio', label: 'Portfolio', href: '/portfolio' },
 ];
 
 /**
@@ -36,14 +37,14 @@ export function ProfileTabs() {
 
   return (
     <nav className="sticky top-0 z-30 border-x border-b border-border/70 bg-card/95 backdrop-blur-md">
-      <div className="section-container flex gap-1">
+      <div className="section-container no-scrollbar flex gap-1 overflow-x-auto">
         {tabs.map((tab) => (
           <a
             key={tab.id}
-            href={`#${tab.id}`}
+            href={tab.href ?? `#${tab.id}`}
             onClick={() => setActive(tab.id)}
             className={cn(
-              'relative px-4 py-3 text-sm font-semibold transition-colors',
+              'relative shrink-0 whitespace-nowrap px-4 py-3 text-sm font-semibold transition-colors',
               active === tab.id ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
             )}
           >

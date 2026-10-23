@@ -3,6 +3,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { siteConfig, siteUrl } from '@/lib/site';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -11,10 +12,43 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Mc Zaldy Yap — Web Developer',
-  description:
-    'Portfolio of Mc Zaldy Yap, a web developer building fast, responsive apps with Next.js, React and TypeScript.',
-  keywords: ['Web Developer', 'Next.js', 'React', 'TypeScript', 'Portfolio', 'Mc Zaldy Yap'],
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteConfig.title,
+    template: `%s — ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [
+    'Web Developer',
+    'Video Editor',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Portfolio',
+    'Cebu Developer',
+    'Mc Zaldy Yap',
+  ],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: siteConfig.authorTwitter,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

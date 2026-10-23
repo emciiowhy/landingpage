@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Twitter, Facebook, FileText, MessageCircle, BadgeCheck } from 'lucide-react';
+import { ViewCounter } from '@/components/engagement/ViewCounter';
 
 const socials = [
   { icon: Linkedin, href: 'https://linkedin.com/in/emciiowhy', label: 'LinkedIn' },
@@ -81,7 +82,9 @@ export function ProfileHeader() {
                 </Button>
               </Link>
             </div>
-            <div className="flex gap-3 sm:justify-end">
+            <div className="flex items-center gap-3 sm:justify-end">
+              <ViewCounter />
+              <span className="h-4 w-px bg-border" aria-hidden />
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

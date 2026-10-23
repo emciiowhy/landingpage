@@ -76,4 +76,7 @@ export const projects: Project[] = [
   // },
 ];
 
-export const projectCategories: ProjectCategory[] = ['Featured', 'Experiments'];
+// Only categories that actually have projects are listed here (keeps the
+// "My Creations" filter from showing an empty row). Add 'Experiments' back
+// once you have experiment projects to populate it.
+export const projectCategories: ProjectCategory[] = ['Featured'];

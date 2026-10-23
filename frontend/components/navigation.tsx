@@ -16,6 +16,7 @@ export default function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Experience' }, // Changed from "Projects"
+    { href: '/portfolio', label: 'Portfolio' },
     { href: '/blogs', label: 'Blogs' },
     { href: '/contact', label: 'Contact' },
   ];

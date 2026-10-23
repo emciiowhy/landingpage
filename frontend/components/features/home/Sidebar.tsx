@@ -22,8 +22,10 @@ const personal = [
   { icon: Languages, label: 'Filipino, English' },
 ];
 
-// Non-dev roles kept as supporting background, not the headline.
+// Compact work history — kept in sync with the main #experience timeline.
 const experience = [
+  { role: 'B2B Sales Representative', org: 'Work-From-Home BPO', period: '2025 – Present' },
+  { role: 'Freelance Video Editor', org: 'Self-Employed', period: '2025 – Present' },
   { role: 'Data Scraper', org: 'Lead Generation (Facebook Analytics)', period: '2022 – 2025' },
   { role: 'Telephone Interviewer', org: 'Dynata', period: '2024' },
   { role: 'ESL Teacher', org: 'First English Global', period: '2022' },

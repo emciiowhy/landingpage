@@ -84,6 +84,10 @@
   body {
     @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;
+    /* Safety net: never allow accidental horizontal scroll (e.g. decorative
+       glows or wide rows). `clip` doesn't create a scroll container, so the
+       sticky tab bar keeps working. */
+    overflow-x: clip;
   }
   a,
   button {

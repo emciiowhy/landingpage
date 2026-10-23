@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contact';
+import engagementRoutes, { ensureEngagementTables } from './routes/engagement';
 import { db } from './db';
 
 dotenv.config();
@@ -31,19 +32,20 @@ app.use(
       }
     },
     credentials: true,
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-key'],
   })
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Test DB connection
+// ✅ Test DB connection + make sure engagement tables exist
 (async () => {
   try {
     await db.execute(`SELECT NOW()`);
     console.log('✅ Connected to Neon Postgres successfully!');
+    await ensureEngagementTables();
   } catch (err) {
     console.error('❌ Failed to connect to Neon DB:', err);
   }
@@ -51,6 +53,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // ✅ Routes
 app.use('/api/contact', contactRoutes);
+app.use('/api/engagement', engagementRoutes);
 
 // ✅ Health check
 app.get('/api/health', async (_req: Request, res: Response) => {
