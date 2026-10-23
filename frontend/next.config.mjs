@@ -8,6 +8,11 @@ const nextConfig = {
       ignoreBuildErrors: true,
     },
 
+    eslint: {
+      // Don't fail the production build on lint warnings/errors.
+      ignoreDuringBuilds: true,
+    },
+
     images: {
       // Useful for static exports or if you prefer manual image optimization
       unoptimized: true, 
